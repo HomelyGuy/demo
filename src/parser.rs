@@ -188,10 +188,10 @@ impl Parser {
         if self.dirs.is_empty() {
             use crate::constant;
             if constant::use_gitpage {
-                let path = format!("{}{}", constant::subpath, "data/");
+                let path = format!("{}{}", constant::subpath, "public/");
                 self.dirs.push(path.into());
             } else {
-                self.dirs.push("data/".into());
+                self.dirs.push("public/".into());
             }
         }
         for dir in self.dirs.iter() {
@@ -372,7 +372,7 @@ impl Parser {
 
     pub async fn load(&mut self, dir: Option<&str>, batch_size: u64) {
         let key = match dir {
-            None => PathBuf::from("data/"),
+            None => PathBuf::from("public/"),
             Some(d) => PathBuf::from(d),
         };
         if let Some((offset, paths)) = self.blog_paths.get(&key) {
