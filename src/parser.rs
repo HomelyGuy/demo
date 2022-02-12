@@ -188,9 +188,11 @@ impl Parser {
         if self.dirs.is_empty() {
             use crate::constant;
             if constant::use_gitpage {
-                self.dirs.push(constant::subpath.into());
+                let path = format!("{}{}", constant::subpath, "data/");
+                self.dirs.push(path.into());
+            } else {
+                self.dirs.push("data/".into());
             }
-            self.dirs.push("data/".into());
         }
         for dir in self.dirs.iter() {
             log::debug!("{}", &format!("parse dir: {:?}", dir));
