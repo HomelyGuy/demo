@@ -186,6 +186,10 @@ impl Parser {
         use wasm_bindgen_futures::JsFuture;
         log::trace!("{}", &format!("read dir",));
         if self.dirs.is_empty() {
+            use crate::constant;
+            if constant::use_gitpage {
+                self.dirs.push(constant::subpath.into());
+            }
             self.dirs.push("data/".into());
         }
         for dir in self.dirs.iter() {
@@ -241,6 +245,10 @@ impl Parser {
             .expect("HOST is not NULL")
             .to_string();
         let mut url = format!("{}//{}/", protocol, host,);
+        use crate::constant;
+        if constant::use_gitpage {
+            url.push_str(constant::subpath);
+        }
         url.push_str(path);
         log::debug!("{}", &format!("url: {:?}", url));
         if let Ok(res) = wasm_bindgen_futures::JsFuture::from(window.fetch_with_str(&url)).await {

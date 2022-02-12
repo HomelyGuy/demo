@@ -1,4 +1,5 @@
 mod components;
+mod constant;
 mod content;
 mod generator;
 mod pages;
@@ -185,12 +186,12 @@ fn switch(routes: &Route) -> Html {
 
 fn main() {
     wasm_logger::init(wasm_logger::Config::new(log::Level::Trace));
-    parser::log("before parse");
+    log::debug!("before parse");
     static mut INITED: bool = false;
     spawn_local(async move {
         log::info!("parsing");
         let mut parse = parser::Parser::new();
-        parse.add_dir("data/");
+        //parse.add_dir("data/");
         unsafe {
             if !INITED {
                 parse.parse().await;
