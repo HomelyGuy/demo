@@ -211,7 +211,7 @@ impl Parser {
             if !url.ends_with("/") {
                 url.push_str("/");
             }
-            url.push_str(".index");
+            url.push_str("markdown.index");
             log::debug!("{}", &format!("url: {:?}", url));
             let res = JsFuture::from(window.fetch_with_str(&url)).await.unwrap();
             assert!(res.is_instance_of::<web_sys::Response>());
