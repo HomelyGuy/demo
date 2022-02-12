@@ -2,9 +2,9 @@ use lazy_static::lazy_static;
 use lipsum::MarkovChain;
 use rand::{distributions::Bernoulli, rngs::SmallRng, seq::IteratorRandom, Rng, SeedableRng};
 
-const KEYWORDS: &str = include_str!("../data/keywords.txt");
-const SYLLABLES: &str = include_str!("../data/syllables.txt");
-const YEW_CONTENT: &str = include_str!("../data/yew.txt");
+const KEYWORDS: &str = include_str!("../public/keywords.txt");
+const SYLLABLES: &str = include_str!("../public/syllables.txt");
+const YEW_CONTENT: &str = include_str!("../public/yew.txt");
 
 lazy_static! {
     static ref YEW_CHAIN: MarkovChain<'static> = {
