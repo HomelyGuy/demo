@@ -372,7 +372,15 @@ impl Parser {
 
     pub async fn load(&mut self, dir: Option<&str>, batch_size: u64) {
         let key = match dir {
-            None => PathBuf::from("public/"),
+            None => {
+                use crate::constant;
+                if constant::use_gitpage {
+                    let path = format!("{}{}", constant::subpath, "public/");
+                    PathBuf::from(path)
+                } else {
+                    PathBuf::from("public/")
+                }
+            }
             Some(d) => PathBuf::from(d),
         };
         if let Some((offset, paths)) = self.blog_paths.get(&key) {
