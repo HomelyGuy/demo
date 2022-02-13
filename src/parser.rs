@@ -225,7 +225,7 @@ impl Parser {
             let paths = text
                 .split("\n")
                 .map(|e| e.trim().to_string())
-                .filter(|e| e.len() != 0 && (e.ends_with("md") || e.ends_with("markdown")))
+                .filter(|e| e.len() != 0 && (e.ends_with("rmd") || e.ends_with("rmarkdown")))
                 .map(|e| e.into())
                 .collect();
             self.blog_paths.insert(dir.into(), (0, paths));
