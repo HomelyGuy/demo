@@ -380,6 +380,7 @@ impl Parser {
             if paths.len() > *offset {
                 for ind in 0..batch_size as usize {
                     let path = &paths[ind + *offset];
+                    log::debug!("path: {:?}", path.to_str().unwrap());
                     if let Some(buf) = self.read_file(path.to_str().unwrap()).await {
                         cnt += 1;
                         if !buf.is_empty() {
