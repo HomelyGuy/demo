@@ -1,34 +1,24 @@
 mod components;
 mod constant;
 mod content;
-mod generator;
 mod pages;
 mod parser;
 
 use crate::content::Blog;
-use parser::{Order, Parser};
-use std::path::PathBuf;
-use wasm_bindgen::JsCast;
+use crate::content::BlogMeta;
+use crate::pages::post::FetchState;
+use crate::parser::read_dir;
+use parser::Parser;
 use yew::prelude::*;
 use yew_router::prelude::*;
 
-use wasm_bindgen_futures::spawn_local;
-
-use pages::{home::Home, page_not_found::PageNotFound, post::Post, post_list::PostList};
+use pages::{page_not_found::PageNotFound, post::Post, post_list::PostList};
 use yew::html::Scope;
 
 #[derive(Routable, PartialEq, Clone, Debug)]
 pub enum Route {
-    #[at("/posts/:id")]
-    Post { id: u64 },
-    #[at("/posts")]
-    Posts,
-    /*
-     *#[at("/authors/:id")]
-     *Author { id: u64 },
-     *#[at("/authors")]
-     *Authors,
-     */
+    #[at("/:id/:title")]
+    Post { id: u64, title: String },
     #[at("/")]
     Home,
     #[not_found]
@@ -36,122 +26,212 @@ pub enum Route {
     NotFound,
 }
 
+pub type ParseActContext = UseReducerHandle<Parser>;
+use crate::parser::ParseAct;
+
 #[function_component(App)]
-pub fn app(props: &Parser) -> Html {
-    let ctx = use_state(|| props.clone());
-    parser::log(&format!("in app parser len: {:?}", props.len()));
+pub fn app() -> Html {
+    let ctx = use_reducer(|| Parser::new());
 
     html! {
-        <ContextProvider<Parser> context={(*ctx).clone()}>
+        <ContextProvider<ParseActContext> context={ctx}>
             <Model />
-        </ContextProvider<Parser>>
+        </ContextProvider<ParseActContext>>
     }
 }
 
 pub enum Msg {
-    ToggleNavbar,
-    ChangeOrder(Order),
+    LoadBlogMeta,
+    Ready,
+    Notified,
 }
 
 pub struct Model {
-    navbar_active: bool,
+    state: FetchState<()>,
+    notified: bool,
 }
 impl Component for Model {
     type Message = Msg;
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
-        //let state = use_state(|| _ctx.props().clone());
+        use std::sync::Once;
+        static mut INIT: Once = Once::new();
+        unsafe {
+            INIT.call_once(|| {
+                _ctx.link().send_message(Msg::LoadBlogMeta);
+            });
+        }
         Self {
-            navbar_active: false,
+            state: FetchState::NotFetching,
+            notified: false,
         }
     }
 
     fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
+        let (parser, _) = _ctx
+            .link()
+            .context::<ParseActContext>(Callback::noop())
+            .expect("Parser Context not found");
         match msg {
-            Msg::ToggleNavbar => {
-                self.navbar_active = !self.navbar_active;
+            Msg::Notified => {
+                self.notified = true;
                 true
             }
-            Msg::ChangeOrder(ord) => {
-                //_ctx.props().change_ord(ord);
-                let (mut p, _) = _ctx
-                    .link()
-                    .context::<Parser>(Callback::noop())
-                    .expect("Context to be set");
-                p.change_ord(ord);
+            Msg::Ready => {
+                self.state = FetchState::Success(());
                 true
+            }
+            Msg::LoadBlogMeta => {
+                _ctx.link().send_future(async move {
+                    let paths = read_dir().await;
+                    log::trace!("markdown index: {:?}", paths);
+                    parser.dispatch(ParseAct::BlogPath(paths));
+                    parser.dispatch(ParseAct::MoreBlogMeta);
+                    Msg::Ready
+                });
+                false
             }
         }
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
-        html! {
-            <BrowserRouter>
+        let onclick = ctx.link().callback(|_| Msg::Notified);
+        match self.state {
+            FetchState::NotFetching => html! {
+                <>
+                        { self.view_nav(ctx.link()) }
+                { if !self.notified  {
+                     html!{
+                        <div class="container mt-24 notification is-light">
+                            <button class="delete" {onclick}> </button>
+                            <br />
+                            <strong class="content is-large">{ " Blogs Not Fetched" }</strong>
+                            <br />
+                        </div>
+                     }
+                } else {
+                    html!{}
+                }
+                }
+                </>
+            },
+            FetchState::Fetching => html! {
+                <>
+                        { self.view_nav(ctx.link()) }
+                { if !self.notified {
+                    html!{
+                        <div class="container mt-24 notification is-info">
+                            <button class="delete" {onclick}> </button>
+                            <br />
+                            <strong class="content is-large">{ "Loading Blog " }</strong>
+                            <br />
+                        </div>
+                    }
+                   } else {
+                       html! {}
+                 }
+                }
+                </>
+            },
+            FetchState::Failed(_) => html! {
+                <>
                 { self.view_nav(ctx.link()) }
+                { if !self.notified {
+                   html!{
+                    <div class="container mt-24 notification is-danger">
+                        <button class="delete" {onclick}> </button>
+                        <br />
+                        <strong class="is-large">{ " Blog Loaded Failed" }</strong>
+                    </div>
+               } } else { html!{} }
+                }
+                </>
+            },
+            FetchState::Success(_) => {
+                html! {
+                    <BrowserRouter>
+                        { self.view_nav(ctx.link()) }
 
-            <main>
-                <Switch<Route> render={Switch::render(switch)} />
-            </main>
-                /*
-                 *<footer class="footer">
-                 *    <div class="content has-text-centered">
-                 *        { "Powered by " }
-                 *        <a href="https://yew.rs">{ "Yew" }</a>
-                 *        { " using " }
-                 *        <a href="https://bulma.io">{ "Bulma" }</a>
-                 *        { " and images from " }
-                 *        <a href="https://unsplash.com">{ "Unsplash" }</a>
-                 *    </div>
-                 *</footer>
-                 */
-                </BrowserRouter>
+                    <main>
+                        <Switch<Route> render={Switch::render(switch)} />
+                    </main>
+                        <footer class="footer">
+                            <div class="content has-text-centered">
+                              { constant::SITE_DESCRIPTION }
+                            </div>
+                        </footer>
+                        </BrowserRouter>
+                }
+            }
         }
     }
 }
 impl Model {
-    fn view_nav(&self, link: &Scope<Self>) -> Html {
-        let Self { navbar_active, .. } = *self;
-
-        let active_class = if !navbar_active { "is-active" } else { "" };
-
+    fn view_user_info(&self) -> Html {
+        let s = constant::USER_INFO;
+        let mut infos = Vec::new();
+        s.split("\n")
+            .map(|e| e.trim())
+            .filter(|e| e.len() != 0)
+            .for_each(|e| {
+                let pairs: Vec<&str> = e
+                    .splitn(2, ":")
+                    .map(|e| e.trim().trim_end_matches(","))
+                    .collect();
+                if pairs.len() == 2 {
+                    log::debug!("key: {}, value: {}", pairs[0], pairs[1]);
+                    let item = if pairs[0] == "email" {
+                        html! {
+                            <a class="navbar-item" href={format!("mailto:{}", pairs[1])} >
+                                { pairs[0] }
+                            </a>
+                        }
+                    } else {
+                        html! {
+                            <a class="navbar-item" target="_blank" href={pairs[1]} >
+                                { pairs[0] }
+                            </a>
+                        }
+                    };
+                    infos.push(item);
+                }
+            });
         html! {
-            <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+            <div class="navbar-dropdown">
+              { for infos }
+            </div>
+        }
+    }
+
+    fn view_nav(&self, _link: &Scope<Self>) -> Html {
+        html! {
+            <nav class="navbar" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
-                    <h1 class="navbar-item is-size-3">{ "VPS Blog" }</h1>
-
-                    <button class={classes!("navbar-burger", "burger", active_class)}
-                        aria-label="menu" aria-expanded="false"
-                        onclick={link.callback(|_| Msg::ToggleNavbar)}
-                    >
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </button>
+                    <a class="navbar-item" href="/">
+                    <h1 class="navbar-item is-size-3">{ constant::SITE_NAME }</h1>
+                    </a>
+                    <a class="navbar-item" href="/">
+                        <figure class="image is-rounded pr-3">
+                            <img src={constant::LOGO_PIC} class="image"/>
+                        </figure>
+                    </a>
                 </div>
-                <div class={classes!("navbar-menu", active_class)}>
-                    <div class="navbar-start">
-                        <Link<Route> classes={classes!("navbar-item")} to={Route::Home}>
-                            { "Home" }
-                        </Link<Route>>
-                        <Link<Route> classes={classes!("navbar-item")} to={Route::Posts}>
-                            { "Posts" }
-                        </Link<Route>>
-
+                <div class="navbar-end">
+                    <div class="navbar-item" >
+                    <div class="field is-grouped">
+                        <a  href="/">
+                            <figure class="image is-rounded pr-3">
+                                <img style="width:auto;" src={ constant::AVATR_PIC} />
+                            </figure>
+                        </a>
                         <div class="navbar-item has-dropdown is-hoverable">
-                            /*
-                             *<div class="navbar-link">
-                             *    { "More" }
-                             *</div>
-                             */
-                            /*
-                             *<div class="navbar-dropdown">
-                             *    <Link<Route> classes={classes!("navbar-item")} to={Route::Authors}>
-                             *        { "Meet the authors" }
-                             *    </Link<Route>>
-                             *</div>
-                             */
+                        <a class="title is-5" href="/">
+                            { constant::ADMIN }
+                        </a>
+                          { self.view_user_info() }
                         </div>
+                    </div>
                     </div>
                 </div>
             </nav>
@@ -161,22 +241,11 @@ impl Model {
 
 fn switch(routes: &Route) -> Html {
     match routes.clone() {
-        Route::Post { id } => {
-            html! { <Post offset={id} /> }
+        Route::Post { id, title } => {
+            html! { <Post id={id} title={title} /> }
         }
-        Route::Posts => {
-            html! { <PostList /> }
-        }
-        /*
-         *Route::Author { id } => {
-         *    html! { <Author seed={id} /> }
-         *}
-         *Route::Authors => {
-         *    html! { <AuthorList /> }
-         *}
-         */
         Route::Home => {
-            html! { <Home /> }
+            html! { <PostList /> }
         }
         Route::NotFound => {
             html! { <PageNotFound /> }
@@ -187,41 +256,5 @@ fn switch(routes: &Route) -> Html {
 fn main() {
     wasm_logger::init(wasm_logger::Config::new(log::Level::Trace));
     log::debug!("before parse");
-    static mut INITED: bool = false;
-    spawn_local(async move {
-        log::info!("parsing");
-        let mut parse = parser::Parser::new();
-        //parse.add_dir("data/");
-        unsafe {
-            if !INITED {
-                parse.parse().await;
-                INITED = true;
-            }
-        }
-        log::debug!("posts len: {}, indexs: {:?}", parse.len(), parse.indexs());
-        //p2.lock().unwrap().push(parse);
-        //yew::start_app::<Model>();
-        yew::start_app_with_props::<App>(parse);
-    });
-    //wasm_logger::init(wasm_logger::Config::new(log::Level::Trace));
-    ////yew::start_app::<Model>();
-    //loop {
-    //match p.lock().unwrap().pop() {
-    //Some(parse) => {
-    //if parse.parsed {
-    //yew::start_app_with_props::<Model>(parse);
-    //break;
-    //} else {
-    //// wait for the Parse to be done
-    //log::debug!("val: some, parser is not ready yet");
-    ////std::thread::sleep(std::time::Duration::from_millis(10));
-    //}
-    //}
-    //None => {
-    //// wait for the Parse to be done
-    //log::debug!("val: None, parser is not ready yet");
-    ////std::thread::sleep(std::time::Duration::from_millis(10));
-    //}
-    //}
-    //}
+    yew::start_app::<App>();
 }

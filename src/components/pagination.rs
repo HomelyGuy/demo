@@ -30,13 +30,25 @@ impl Component for Pagination {
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
-        html! {
-            <nav class="pagination is-right" role="navigation" aria-label="pagination">
-                { self.view_relnav_buttons(ctx.props()) }
-                <ul class="pagination-list">
-                    { self.view_links(ctx.props()) }
-                </ul>
-            </nav>
+        log::debug!(
+            "page: {}, total: {}",
+            ctx.props().page,
+            ctx.props().total_pages
+        );
+        if ctx.props().page == 0 {
+            log::debug!("no posts to pagination");
+            html! { {"No Page Found"} }
+        } else {
+            html! {
+                <>
+                <nav class="pagination is-right" role="navigation" aria-label="pagination">
+                    { self.view_relnav_buttons(ctx.props()) }
+                    <ul class="pagination-list">
+                        { self.view_links(ctx.props()) }
+                    </ul>
+                </nav>
+                </>
+            }
         }
     }
 }

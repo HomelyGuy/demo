@@ -36,18 +36,18 @@
     --color-markdown-code-bg: #f0f6fc26;
 }
 
-body ol ol,
-body ul ol,
-body ol ul,
-body ul ul,
-body ol ul ol,
-body ul ul ol,
-body ol ul ul,
-body ul ul ul {
+.markdown-body ol ol,
+.markdown-body ul ol,
+.markdown-body ol ul,
+.markdown-body ul ul,
+.markdown-body ol ul ol,
+.markdown-body ul ul ol,
+.markdown-body ol ul ul,
+.markdown-body ul ul ul {
   margin-top: 0;
   margin-bottom: 0;
 }
-body {
+.markdown-body {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   color: var(--color-text-primary);
@@ -59,137 +59,137 @@ body {
   -webkit-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
 }
-body > *:first-child {
+.markdown-body > *:first-child {
   margin-top: 0 !important;
 }
-body > *:last-child {
+.markdown-body > *:last-child {
   margin-bottom: 0 !important;
 }
-body .table-of-contents ol {
+.markdown-body .table-of-contents ol {
   list-style: none;
 }
-body .table-of-contents > ol {
+.markdown-body .table-of-contents > ol {
   padding-left: 0;
 }
-body * {
+.markdown-body * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6 {
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
   margin-top: 1em;
   margin-bottom: 16px;
   font-weight: bold;
   line-height: 1.4;
 }
-body h1 .anchor,
-body h2 .anchor,
-body h3 .anchor,
-body h4 .anchor,
-body h5 .anchor,
-body h6 .anchor {
+.markdown-body h1 .anchor,
+.markdown-body h2 .anchor,
+.markdown-body h3 .anchor,
+.markdown-body h4 .anchor,
+.markdown-body h5 .anchor,
+.markdown-body h6 .anchor {
   margin-left: -24px;
   visibility: hidden;
 }
-body h1:hover .anchor,
-body h2:hover .anchor,
-body h3:hover .anchor,
-body h4:hover .anchor,
-body h5:hover .anchor,
-body h6:hover .anchor {
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
   visibility: visible;
 }
-body p,
-body blockquote,
-body ul,
-body ol,
-body dl,
-body table,
-body pre {
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
   margin-top: 0;
   margin-bottom: 16px;
 }
-body h1 {
+.markdown-body h1 {
   margin: 0.67em 0;
   padding-bottom: 0.3em;
   font-size: 2.25em;
   line-height: 1.2;
   border-bottom: 1px solid var(--color-border-secondary);
 }
-body h2 {
+.markdown-body h2 {
   padding-bottom: 0.3em;
   font-size: 1.75em;
   line-height: 1.225;
   border-bottom: 1px solid var(--color-border-secondary);
 }
-body h3 {
+.markdown-body h3 {
   font-size: 1.5em;
   line-height: 1.43;
 }
-body h4 {
+.markdown-body h4 {
   font-size: 1.25em;
 }
-body h5 {
+.markdown-body h5 {
   font-size: 1em;
 }
-body h6 {
+.markdown-body h6 {
   font-size: 1em;
   color: var(--color-text-tertiary);
 }
-body hr {
+.markdown-body hr {
   margin-top: 20px;
   margin-bottom: 20px;
   height: 0;
   border: 0;
   border-top: 1px solid var(--color-border-primary);
 }
-body ol,
-body ul {
+.markdown-body ol,
+.markdown-body ul {
   padding-left: 2em;
 }
-body ol ol,
-body ul ol {
+.markdown-body ol ol,
+.markdown-body ul ol {
   list-style-type: lower-roman;
 }
-body ol ul,
-body ul ul {
+.markdown-body ol ul,
+.markdown-body ul ul {
   list-style-type: circle;
 }
-body ol ul ul,
-body ul ul ul {
+.markdown-body ol ul ul,
+.markdown-body ul ul ul {
   list-style-type: square;
 }
-body ol {
+.markdown-body ol {
   list-style-type: decimal;
 }
-body ul {
+.markdown-body ul {
   list-style-type: disc;
 }
-body dl {
+.markdown-body dl {
   margin-bottom: 1.3em
 }
-body dl dt {
+.markdown-body dl dt {
   font-weight: 700;
 }
-body dl dd {
+.markdown-body dl dd {
   margin-left: 0;
 }
-body dl dd p {
+.markdown-body dl dd p {
   margin-bottom: 0.8em;
 }
-body blockquote {
+.markdown-body blockquote {
   margin-left: 0;
   margin-right: 0;
   padding: 0 15px;
   color: var(--color-text-tertiary);
   border-left: 4px solid var(--color-markdown-blockquote-border);
 }
-body table {
+.markdown-body table {
   display: block;
   width: 100%;
   overflow: auto;
@@ -198,19 +198,19 @@ body table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-body table tr {
+.markdown-body table tr {
   background-color: var(--color-bg-primary);
   border-top: 1px solid var(--color-markdown-table-tr-border);
 }
-body table tr:nth-child(2n) {
+.markdown-body table tr:nth-child(2n) {
   background-color: var(--color-bg-tertiary);
 }
-body table th,
-body table td {
+.markdown-body table th,
+.markdown-body table td {
   padding: 6px 13px;
   border: 1px solid var(--color-markdown-table-border);
 }
-body kbd {
+.markdown-body kbd {
   display: inline-block;
   padding: 5px 6px;
   font: 14px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
@@ -222,7 +222,7 @@ body kbd {
   border-radius: 3px;
   box-shadow: inset 0 -1px 0 var(--color-border-tertiary);
 }
-body pre {
+.markdown-body pre {
   word-wrap: normal;
   padding: 16px;
   overflow: auto;
@@ -232,7 +232,7 @@ body pre {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-body pre code {
+.markdown-body pre code {
   display: inline;
   max-width: initial;
   padding: 0;
@@ -247,11 +247,11 @@ body pre code {
   border-radius: 3px;
   background-color: transparent;
 }
-body pre code:before,
-body pre code:after {
+.markdown-body pre code:before,
+.markdown-body pre code:after {
   content: normal;
 }
-body code {
+.markdown-body code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
   padding-top: 0.2em;
@@ -262,27 +262,27 @@ body code {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-body code:before,
-body code:after {
+.markdown-body code:before,
+.markdown-body code:after {
   letter-spacing: -0.2em;
   content: "\00a0";
 }
-body a {
+.markdown-body a {
   color: var(--color-text-link);
   text-decoration: none;
   background: transparent;
 }
-body img {
+.markdown-body img {
   max-width: 100%;
   max-height: 100%;
 }
-body strong {
+.markdown-body strong {
   font-weight: bold;
 }
-body em {
+.markdown-body em {
   font-style: italic;
 }
-body del {
+.markdown-body del {
   text-decoration: line-through;
 }
 .task-list-item {
@@ -324,7 +324,7 @@ html,body,#__next,main {
   --border-color: #d1d5da;
 }
 
-body {
+.markdown-body {
   --secondary-background-color: #f6f8fa;
 }
 

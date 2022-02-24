@@ -1,15 +1,131 @@
-use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
 use std::path::PathBuf;
 
-/// it represents a `Blog`
-#[derive(Deserialize, Serialize, Clone, Debug, Eq, PartialEq)]
-pub struct Blog {
-    pub path: PathBuf,
-    pub timestamp: u64,
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct BlogMeta {
+    pub id: u64,
     pub title: String,
+    pub timestamp: u64,
+    pub path: PathBuf,
+    pub hero: String,
+}
+
+use std::hash::{Hash, Hasher};
+impl Hash for BlogMeta {
+    fn hash<H>(&self, state: &mut H)
+    where
+        H: std::hash::Hasher,
+    {
+        self.title.hash(state);
+        self.timestamp.hash(state);
+        self.path.hash(state);
+    }
+}
+
+impl BlogMeta {
+    pub fn new() -> Self {
+        Self {
+            id: 0,
+            path: PathBuf::new(),
+            timestamp: 0,
+            title: "".into(),
+            hero: "".into(),
+        }
+    }
+
+    pub fn get_hash(&mut self) {
+        use std::collections::hash_map::DefaultHasher;
+        let mut hasher = DefaultHasher::new();
+        self.hash(&mut hasher);
+        self.id = hasher.finish();
+    }
+
+    pub fn with_path(path: &str) -> Option<Self> {
+        let path = PathBuf::from(path);
+        if let Some(file_name) = path.file_name() {
+            if file_name.to_str().is_none() {
+                log::error!("file name is not valid: {:?}", path);
+                return None;
+            }
+            let file_name_str = file_name.to_str().unwrap();
+            let pat = regex::Regex::new(
+                r"(\d{2,4}\D\d{1,2}\D\d{1,2}(\D\d{1,2}){0,3})\D(?P<title>.*?)\.rmd$",
+            )
+            .unwrap();
+            //let path1 = "19-10-07-13-32-bolg-title-here";
+            //let path1 = "data/19-10-07-13-bolg-title-here.md";
+            //let path1 = "";
+            //self.path = path1.into();
+            let mut time_items = [0u64; 6];
+            const UNITS: [u64; 6] = [365 * 24 * 3600, 30 * 24 * 3600, 24 * 3600, 60 * 60, 60, 1];
+            // if path is matched
+            if let Some(cap) = pat.captures(file_name_str) {
+                cap[1]
+                    .split(|c: char| !c.is_ascii_digit())
+                    .enumerate()
+                    .for_each(|(ind, e)| {
+                        let num = e.parse::<u64>().unwrap_or(0);
+                        time_items[ind] = num;
+                    });
+                if time_items[0] < 100 {
+                    time_items[0] += 32;
+                }
+                let sum = UNITS
+                    .iter()
+                    .zip(time_items.iter())
+                    .fold(0, |acc, (e1, e2)| acc + e1 * e2);
+                if cap.name("title").is_none() {
+                    log::error!(
+                        "title that consist of the file name is not valid: {:?}",
+                        path
+                    );
+                    return None;
+                }
+                let mut meta = Self {
+                    id: 0,
+                    title: cap.name("title").unwrap().as_str().into(),
+                    path,
+                    timestamp: sum,
+                    hero: "".into(),
+                };
+                meta.get_hash();
+                meta.image_url();
+
+                log::debug!("time items: {:?}, its sum: {}", time_items, sum);
+                return Some(meta);
+            } else {
+                log::error!("file name is not valid: {:?}", path);
+                return None;
+            }
+        } else {
+            log::error!("file name is not valid: {:?}", path);
+            return None;
+        }
+    }
+
+    pub fn image_url(&mut self) {
+        static mut DELTA: u16 = 0;
+        log::trace!("generating image url");
+        let mut now = js_sys::Date::now() * 1000.0;
+        unsafe { now += DELTA as f64 };
+        log::trace!("now is: {}", now);
+        let cache_buster = (now as u64 % u16::MAX as u64) as u16;
+        log::trace!("cache_buster is: {}", cache_buster);
+        self.hero = format!(
+            "https://source.unsplash.com/random/600x300&sig={}",
+            cache_buster
+        );
+        log::trace!("here url: {}", self.hero);
+        unsafe {
+            DELTA += 1;
+        }
+    }
+}
+
+/// it represents a `Blog`
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct Blog {
+    pub meta: BlogMeta,
     pub tags: Vec<String>,
-    pub hero: Option<String>,
     pub content: Vec<String>,
     pub published: bool,
     pub ignored: bool,
@@ -32,7 +148,7 @@ impl Blog {
         let mut time_items = [0u64; 6];
         const UNITS: [u64; 6] = [365 * 24 * 3600, 30 * 24 * 3600, 24 * 3600, 60 * 60, 60, 1];
         // if path is matched
-        if let Some(cap) = pat.captures(self.path.to_str().unwrap()) {
+        if let Some(cap) = pat.captures(self.meta.path.to_str().unwrap()) {
             cap[1]
                 .split(|c: char| !c.is_ascii_digit())
                 .enumerate()
@@ -47,7 +163,7 @@ impl Blog {
                 .iter()
                 .zip(time_items.iter())
                 .fold(0, |acc, (e1, e2)| acc + e1 * e2);
-            self.timestamp = sum;
+            self.meta.timestamp = sum;
             log::debug!("time items: {:?}, its sum: {}", time_items, sum);
         } else {
             // path is not matched but pre-defined
@@ -71,13 +187,13 @@ impl Blog {
                             .zip(time_items.iter())
                             .fold(0, |acc, (e1, e2)| acc + e1 * e2);
                         log::debug!("time items: {:?}, its sum: {}", time_items, sum);
-                        self.timestamp = sum;
+                        self.meta.timestamp = sum;
                     }
                 }
                 // not know
                 None => {
                     log::error!("Time Stampe is not found in file name nor defined in file");
-                    log::error!("file is ignored to proceed: {:?}", self.path);
+                    log::error!("file is ignored to proceed: {:?}", self.meta.path);
                     self.ignored = true;
                 }
             }
@@ -88,11 +204,8 @@ impl Blog {
 #[test]
 fn test_date_info() {
     let mut blog = Blog {
-        path: PathBuf::new(),
-        timestamp: 0,
-        title: "".into(),
+        meta: BlogMeta::new(),
         tags: vec![],
-        hero: None,
         content: vec![],
         published: false,
         ignored: false,
@@ -103,127 +216,4 @@ fn test_date_info() {
     blog.date_info(Some("2019/10/07 19:57"));
     blog.date_info(Some("2019-10/07 19:57:36"));
     blog.date_info(None);
-}
-
-use crate::generator::{Generated, Generator};
-
-#[derive(Clone, Debug, Eq, PartialEq)]
-pub struct Author {
-    pub seed: u64,
-    pub name: String,
-    pub keywords: Vec<String>,
-    pub image_url: String,
-}
-impl Generated for Author {
-    fn generate(gen: &mut Generator) -> Self {
-        let name = gen.human_name();
-        let keywords = gen.keywords();
-        let image_url = gen.face_image_url((600, 600));
-        Self {
-            seed: gen.seed,
-            name,
-            keywords,
-            image_url,
-        }
-    }
-}
-
-#[derive(Clone, Debug, Eq, PartialEq)]
-pub struct PostMeta {
-    pub seed: u64,
-    pub title: String,
-    pub author: Author,
-    pub keywords: Vec<String>,
-    pub image_url: String,
-}
-impl Generated for PostMeta {
-    fn generate(gen: &mut Generator) -> Self {
-        let title = gen.title();
-        let author = Author::generate_from_seed(gen.new_seed());
-        let keywords = gen.keywords();
-        let image_url = gen.image_url((1000, 500), &keywords);
-
-        Self {
-            seed: gen.seed,
-            title,
-            author,
-            keywords,
-            image_url,
-        }
-    }
-}
-
-#[derive(Clone, Debug, Eq, PartialEq)]
-pub struct Post {
-    pub meta: PostMeta,
-    pub content: Vec<PostPart>,
-}
-impl Generated for Post {
-    fn generate(gen: &mut Generator) -> Self {
-        const PARTS_MIN: usize = 1;
-        const PARTS_MAX: usize = 10;
-
-        let meta = PostMeta::generate(gen);
-
-        let n_parts = gen.range(PARTS_MIN, PARTS_MAX);
-        let content = (0..n_parts).map(|_| PostPart::generate(gen)).collect();
-
-        Self { meta, content }
-    }
-}
-
-#[derive(Clone, Debug, Eq, PartialEq)]
-pub enum PostPart {
-    Section(Section),
-    Quote(Quote),
-}
-impl Generated for PostPart {
-    fn generate(gen: &mut Generator) -> Self {
-        // Because we pass the same (already used) generator down,
-        // the resulting `Section` and `Quote` aren't be reproducible with just the seed.
-        // This doesn't matter here though, because we don't need it.
-        if gen.chance(1, 10) {
-            Self::Quote(Quote::generate(gen))
-        } else {
-            Self::Section(Section::generate(gen))
-        }
-    }
-}
-
-#[derive(Clone, Debug, Eq, PartialEq)]
-pub struct Section {
-    pub title: String,
-    pub paragraphs: Vec<String>,
-    pub image_url: String,
-}
-impl Generated for Section {
-    fn generate(gen: &mut Generator) -> Self {
-        const PARAGRAPHS_MIN: usize = 1;
-        const PARAGRAPHS_MAX: usize = 8;
-
-        let title = gen.title();
-        let n_paragraphs = gen.range(PARAGRAPHS_MIN, PARAGRAPHS_MAX);
-        let paragraphs = (0..n_paragraphs).map(|_| gen.paragraph()).collect();
-        let image_url = gen.image_url((600, 300), &[]);
-
-        Self {
-            title,
-            paragraphs,
-            image_url,
-        }
-    }
-}
-
-#[derive(Clone, Debug, Eq, PartialEq)]
-pub struct Quote {
-    pub author: Author,
-    pub content: String,
-}
-impl Generated for Quote {
-    fn generate(gen: &mut Generator) -> Self {
-        // wouldn't it be funny if the author ended up quoting themselves?
-        let author = Author::generate_from_seed(gen.new_seed());
-        let content = gen.paragraph();
-        Self { author, content }
-    }
 }
