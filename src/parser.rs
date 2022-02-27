@@ -15,9 +15,9 @@ pub async fn read_dir() -> Vec<String> {
     use wasm_bindgen_futures::JsFuture;
     log::trace!("{}", &format!("read dir",));
     let dir = if constant::USE_GITPAGE {
-        format!("{}{}", constant::SUBPATH, "public/")
+        format!("{}{}", constant::SUBPATH, "posts/")
     } else {
-        "public/".into()
+        "posts/".into()
     };
     log::debug!("{}", &format!("parse dir: {:?}", dir));
     let window = web_sys::window().unwrap();

@@ -1,46 +1,43 @@
-# Router Example
+# What's Noer
 
-[![Demo](https://img.shields.io/website?label=demo&url=https%3A%2F%2Fexamples.yew.rs%2Frouter)](https://examples.yew.rs/router)
+[noer](https://github.com/homelyguy/noer) is a minimal static style blog template, which is good choice for those who prefer **Markdown**, **static site**, **Web-assembly**.
 
-A blog all about yew.
-The best way to figure out what this example is about is to just open it up.
-It's mobile friendly too!
+# How To Use
+there are some requirements to be satisfied before we use it.
 
-## Running
+## Pre-requisite
+- First of all, [rust](https://rust-lang.org) language and its building tool are necessary. you can install them following the description [here](https://www.rust-lang.org/tools/install);
+-	Noer is built upon Web-Assembly and [yew](https://yew.rs), the [tutorial](https://yew.rs/docs/tutorial) is recommanded before getting started;
 
-While not strictly necessary, this example should be built in release mode:
-
-```bash
-trunk serve --release
+## Github Page(Optional)
+By default, the compiled output is not suitable for github pages, you got to enable it in the configuration file `src/constant.rs` 
+```
+// by default it is false
+pub const USE_GITPAGE: bool = false;
+// if using github pages, specify the sub-path(ends with `/`)
+pub const SUBPATH: &str = "demo/";
 ```
 
-Content generation can take up quite a bit of time in debug builds.
+## Site Infomation
+There are some basic info about the site in `stc/constant.rs`, including
+- `ITEMS_PER_PAGE` number of posts card that a page to display, note that it shall be multiple of 3.
+- `ADMIN` username of the ower.
+- `SITE_NAME` the name you want call the site.
+- `LOGO_PIC`: the logo display in the page.
+- `AVATR_PIC` avatar of the user
+- `SITE_DESCRIPTION` just site Description.
+- `USER_INFO` some extra infomation of the user present to viewers, such as social network, email, etc. Note that it is line-separated, each line is a key-value pair.
 
-## Concepts
+## Compile
+```
+// normal
+sh ./build.sh
 
-This example involves many different parts, here are just the Yew specific things:
+// github pages output
+// add the sub-path
+sh ./build.sh demo
+```
 
-- Uses [`yew-router`] to render and switch between multiple pages.
-
-The example automatically adapts to the `--public-url` value passed to Trunk.
-This allows it to be hosted on any path, not just at the root.
-For example, our demo is hosted at [/router](https://examples.yew.rs/router).
-
-This is achieved by adding `<base data-trunk-public-url />` to the [index.html](index.html) file.
-Trunk rewrites this tag to contain the value passed to `--public-url` which can then be retrieved at runtime.
-Take a look at [`PublicUrlSwitch`](src/switch.rs) for the implementation.
-
-## Improvements
-
-- Use a special image component which shows a progress bar until the image is loaded.
-- Scroll back to the top after switching route
-- Run content generation in a dedicated web worker
-- Use longer Markov chains to achieve more coherent results
-- Make images deterministic (the same seed should produce the same images)
-- Show posts by the author on their page
-  (this is currently impossible because we need to find post seeds which in turn generate the author's seed)
-- Show other posts at the end of a post ("continue reading")
-- Home (`/`) should include links to the post list and the author introduction
-- Detect sub-path from `--public-url` value passed to Trunk. See: thedodd/trunk#51
-
-[`yew-router`]: https://docs.rs/yew-router/latest/yew_router/
+# Known Issues
+- due to the limit of yew, `late` or `katex` is not supported, see [issue](https://github.com/yewstack/yew/discussions/2446)
+- some uncommon features of markdown are not supported so far (subscript/supscript, some Markup, Definition, Abbreviations)
