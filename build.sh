@@ -1,3 +1,4 @@
+[ -z post/.nojekyll ] && echo "post directory must constains .nojekyll file to disable jekyll SEO" && touch post/.nojekyll
 path=$(cat src/constant.rs | grep SUBPATH | grep ^pub | sed "s/^.*=//g" | sed "s/\"//g" | sed "s/\///g" | sed "s/;//g")
 [ ! -z $path ] && echo "Compiled With Sub-Path: $path"
 target=$( echo $path | sed "s/\///g") 
