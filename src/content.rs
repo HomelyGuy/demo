@@ -107,7 +107,6 @@ impl BlogMeta {
         log::trace!("generating image url");
         let mut now = js_sys::Date::now() * 1000.0;
         unsafe { now += DELTA as f64 };
-        log::trace!("now is: {}", now);
         let cache_buster = (now as u64 % u16::MAX as u64) as u16;
         log::trace!("cache_buster is: {}", cache_buster);
         self.hero = format!(

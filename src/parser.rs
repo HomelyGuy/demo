@@ -14,7 +14,7 @@ pub async fn read_dir() -> Vec<String> {
     use crate::constant;
     use wasm_bindgen_futures::JsFuture;
     log::trace!("{}", &format!("read dir",));
-    let dir = if constant::USE_GITPAGE {
+    let dir = if constant::SUBPATH != "/" {
         format!("{}{}", constant::SUBPATH, "posts/")
     } else {
         "posts/".into()
@@ -50,22 +50,11 @@ pub async fn read_dir() -> Vec<String> {
         .map(|e| e.trim().to_string())
         .filter(|e| e.len() != 0 && e.ends_with("rmd"))
         .collect()
-    /*
-     *iter.map(|e| BlogMeta::with_path(&e))
-     *    .filter(|e| e.is_some())
-     *    .for_each(|e| {
-     *        let item = e.unwrap();
-     *        self.ids.push(item.id);
-     *        self.metas.insert(item.id, item);
-     *    });
-     *self.order();
-     */
 }
 
 pub fn str2blog(s: &str, meta: &BlogMeta) -> Option<Blog> {
     log::trace!("parsing a string into a blog");
     let sp = s.splitn(3, "---").collect::<Vec<_>>();
-    //println!("meta: {:?}, ", sp);
     let metadata = sp[1].trim();
     let cont = sp[2]
         .splitn(2, "<!–-break-–>")

@@ -24,7 +24,7 @@ pub async fn read_file(path: &str) -> Result<String, FetchError> {
         .to_string();
     let mut url = format!("{}//{}/", protocol, host,);
     use crate::constant;
-    if constant::USE_GITPAGE {
+    if constant::SUBPATH != "/" {
         url.push_str(constant::SUBPATH);
     }
     url.push_str(path);

@@ -1,9 +1,6 @@
-
-[ ! -z $1 ] && echo "github page sub path: $1"
-trunk build --release
-sed -i "s/href=\"\//href=\"{\/$1}\//" dist/index.html && sed -i "s/'\/index-/'{\/$1}\/index-/g" dist/index.html
-rm -rf docs/ 
-mv dist/ docs/
-git add . 
-git commit -m "fix minr bugs"
-git push
+path=$(cat src/constant.rs | grep SUBPATH | grep ^pub | sed "s/^.*=//g" | sed "s/\"//g" | sed "s/\///g" | sed "s/;//g")
+[ ! -z $path ] && echo "Compiled With Sub-Path: $path"
+target=$( echo $path | sed "s/\///g") 
+[ ! -z $path ] && sed -i "s@<base data-trunk-public-url \/.*>@<base data-trunk-public-url \/$target\/>@g" index.html || sed -i "s@<base data-trunk-public-url \/.*>@<base data-trunk-public-url \/>@g" index.html 
+[ ! -z $path ] && trunk build --public-url $path --release || trunk build --release
+[ ! -z $path ] && rm -rf $target dist/ && mv dist/ $target 
