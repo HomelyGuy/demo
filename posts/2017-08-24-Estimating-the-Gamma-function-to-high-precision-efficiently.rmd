@@ -18,7 +18,7 @@ published: true
 
 Estimating the Gamma function to high precision efficiently?
 
-<!–-break-–>
+<!--break-->
 
 
 we  know there are several approximations of the Gamma function that provide decent approximations of this function.  

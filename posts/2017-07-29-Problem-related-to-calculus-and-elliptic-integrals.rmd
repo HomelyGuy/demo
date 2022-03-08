@@ -19,7 +19,7 @@ published: true
 
 How to prove $$\int_0^\pi\frac{\ln(2+\cos\phi)}{\sqrt{2+\cos\phi}}d\phi=\frac{\ln3}{\sqrt3}K\left(\sqrt{\frac23}\right)$$?
 
-<!–-break-–>
+<!--break-->
 
 
 How can I prove the following conjectured identity?

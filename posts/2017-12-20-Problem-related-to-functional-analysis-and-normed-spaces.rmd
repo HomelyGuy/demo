@@ -17,7 +17,7 @@ published: true
 
 Explicit norm on $$\mathcal{C}^0(\mathbb{R},\mathbb{R})$$
 
-<!–-break-–>
+<!--break-->
 
 
 Do you know an explicit norm on $$\mathcal{C}^0(\mathbb{R},\mathbb{R})$$? Using the axiom of choice, every vector space admits a norm but have you an explicit formula on  $$\mathcal{C}^0(\mathbb{R},\mathbb{R})$$?

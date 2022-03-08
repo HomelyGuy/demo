@@ -16,7 +16,7 @@ published: true
 
 $$AB - BA = I$$ in Hilbert Space 
 
-<!–-break-–>
+<!--break-->
 
  How can we prove that $$AB - BA = I$$ is not possible ? Probably this is as easy as in the matrices case, but we couldn't prove it.
 

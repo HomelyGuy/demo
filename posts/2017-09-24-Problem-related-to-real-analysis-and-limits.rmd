@@ -16,7 +16,7 @@ published: true
 
 Finding $$\lim\limits_{n \rightarrow \infty}\left(\int_0^1(f(x))^n\,\mathrm dx\right)^\frac{1}{n}$$ for continuous $$f:[0,1]\to[0,\infty)$$ [duplicate]
 
-<!–-break-–>
+<!--break-->
 
 
 

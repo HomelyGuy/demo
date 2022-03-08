@@ -17,7 +17,7 @@ published: true
 
 Must a continuous and periodic functions have a smallest period?
 
-<!–-break-–>
+<!--break-->
 
 
 Let $$D\subset\mathbb R$$ and let $$T\in(0,+\infty)$$. A function $$f\colon D\longrightarrow\mathbb R$$ is called a periodic function with period $$T$$ if, for each $$x\in D$$, $$x+T\in D$$ and $$f(x+T)=f(x)$$.

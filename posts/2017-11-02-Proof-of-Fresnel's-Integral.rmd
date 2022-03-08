@@ -19,7 +19,7 @@ published: true
 
 Proof of Fresnel's Integral
 
-<!–-break-–>
+<!--break-->
 
 
 So, my teacher wants us to prove the Fresnel's integral:

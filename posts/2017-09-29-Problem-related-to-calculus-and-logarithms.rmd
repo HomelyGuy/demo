@@ -16,7 +16,7 @@ published: true
 
 What are some methods to show $$\log$$ is not a rational function?
 
-<!–-break-–>
+<!--break-->
 
 
 It is easy to show $$\log$$ isn't a polynomial (no continuous extension to $$\mathbb{R}$$). More challenging is showing it isn't rational. 

@@ -16,7 +16,7 @@ published: true
 
 When we can change $$\int$$ and $$\sum$$ for indefinite integral?
 
-<!–-break-–>
+<!--break-->
 
 
 we know, for example, that if the series $$\displaystyle\sum_{n=1}^{\infty}f_n(x)$$ consisting of integrable functions on a closed interval $$[a, b] \subset \mathbb{R}$$ converges uniformly on that closed interval, then its sum is also integrable on $$[a, b]$$ and 

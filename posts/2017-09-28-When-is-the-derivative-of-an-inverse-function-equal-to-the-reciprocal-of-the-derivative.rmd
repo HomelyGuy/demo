@@ -17,7 +17,7 @@ published: true
 
 When is the derivative of an inverse function equal to the reciprocal of the derivative?
 
-<!–-break-–>
+<!--break-->
 
 
 When is this statement true?

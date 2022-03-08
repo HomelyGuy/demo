@@ -57,7 +57,7 @@ It looks like that the product $$(3)$$ can we change into a sum, but how ?
 
   [1]: http://www.wolframalpha.com/widget/widgetPopup.jsp?p=v&id=dfaf1b7d15e572ae5a1b2fa172ce8657&title=Math%20Help%20Boards:%20Sum%20Calculator&theme=blue
 
-<!–-break-–>
+<!--break-->
 
 
 # Answer

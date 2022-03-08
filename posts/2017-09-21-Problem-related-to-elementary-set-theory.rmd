@@ -15,7 +15,7 @@ published: true
 
 Bijective map from $$\Bbb Z$$ to $$\Bbb Q$$
 
-<!–-break-–>
+<!--break-->
 
 
 There  exists  a  map $$f: \Bbb Z\rightarrow \Bbb Q $$  such  that  $$f$$  is 

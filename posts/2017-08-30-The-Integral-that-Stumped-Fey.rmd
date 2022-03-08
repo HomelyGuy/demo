@@ -19,7 +19,7 @@ published: true
 
 The integral that Stumped Feynman?
 
-<!–-break-–>
+<!--break-->
 
 
 in "Surely You're Joking, Mr. Feynman!," Nobel-prize winning Physicist Richard Feynman said that he challenged his colleagues to give him an integral that they could evaluate with only complex methods that he could not do with real methods:

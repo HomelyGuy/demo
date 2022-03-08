@@ -18,7 +18,7 @@ published: true
 
 Is $$[0,1]$$ a countable disjoint union of closed sets?
 
-<!–-break-–>
+<!--break-->
 
 
 Can you express $$[0,1]$$ as a countable disjoint union of closed sets, other than the trivial way of doing this?

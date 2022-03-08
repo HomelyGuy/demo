@@ -19,7 +19,7 @@ published: true
 
 Baire Category Theorem without Completeness
 
-<!–-break-–>
+<!--break-->
 
 
 Let $$(X,d)$$ be a metric space.

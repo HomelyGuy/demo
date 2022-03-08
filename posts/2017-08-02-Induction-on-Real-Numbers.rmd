@@ -17,7 +17,7 @@ published: true
 
 Induction on Real Numbers
 
-<!–-break-–>
+<!--break-->
 
 
 One of my Fellows asked me whether total induction is applicable to real numbers, too ( or at least all real numbers ≥ 0) . We only used that for natural numbers so far. 

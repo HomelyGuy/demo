@@ -16,7 +16,7 @@ published: true
 
 What are the differences and relations of Haar integrals, Lebesgue integrals, Riemann integrals?
 
-<!–-break-–>
+<!--break-->
 
 
 Are Riemann integrals special cases of Haar integrals? Why do we need the invariant property under some actions of groups in the definition of Haar integrals? 

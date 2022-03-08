@@ -18,7 +18,7 @@ published: true
 
 Nonexistence of local isometry between equidimensional Riemannian manifolds
 
-<!–-break-–>
+<!--break-->
 
 
 Recall that all inner product spaces of the same dimension are isometric.

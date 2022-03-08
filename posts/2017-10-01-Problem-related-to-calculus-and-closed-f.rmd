@@ -19,7 +19,7 @@ published: true
 
 Compute $$\int_0^{\pi/4}\frac{(1-x^2)\ln(1+x^2)+(1+x^2)-(1-x^2)\ln(1-x^2)}{(1-x^4)(1+x^2)} x\exp(\frac{x^2-1}{x^2+1}) dx$$
 
-<!–-break-–>
+<!--break-->
 
 
 

@@ -16,7 +16,7 @@ published: true
 
 What exactly did Hermann Weyl mean?
 
-<!–-break-–>
+<!--break-->
 
 
 "The introduction of numbers as coordinates is an act of violence.

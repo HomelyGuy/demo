@@ -16,7 +16,7 @@ published: true
 
 Show $$\int_0^{2\pi} \exp\left(\frac{7+5 \cos x}{10+6\cos x}\right) \cos \left( \frac{\sin x}{10+6 \cos x} \right) dx = 2\pi e^{2/3}$$ Real Methods
 
-<!–-break-–>
+<!--break-->
 
 
 Taken from the post: The integral that Stumped Feynman?

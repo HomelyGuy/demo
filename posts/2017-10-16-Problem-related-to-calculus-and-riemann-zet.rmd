@@ -19,7 +19,7 @@ published: true
 
 Computing $$\zeta(6)=\sum\limits_{k=1}^\infty \frac1{k^6}$$ with Fourier series.
 
-<!–-break-–>
+<!--break-->
 
 
 Let $$ f$$ be a function such that $$ f\in C_{2\pi}^{0}(\mathbb{R},\mathbb{R}) $$ (f is $$2\pi$$-periodic) such that $$ \forall x \in [0,\pi]$$: 

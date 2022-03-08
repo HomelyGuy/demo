@@ -19,7 +19,7 @@ published: true
 
 Nice proofs of $$\zeta(4) = \frac{\pi^4}{90}$$?
 
-<!–-break-–>
+<!--break-->
 
 
 we know some nice ways to prove that $$\zeta(2) = \sum_{n=1}^{\infty} \frac{1}{n^2} = \pi^2/6$$.  For example, see Robin Chapman's list or the answers to the question "Different methods to compute $$\sum_{n=1}^{\infty} \frac{1}{n^2}$$?"

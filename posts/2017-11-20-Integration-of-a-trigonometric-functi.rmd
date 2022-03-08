@@ -16,7 +16,7 @@ published: true
 
 Integration of a trigonometric function
 
-<!–-break-–>
+<!--break-->
 
 
 How to integrate: 

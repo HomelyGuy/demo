@@ -15,7 +15,7 @@ published: true
 
 Showing $$f'(x) = f(x)$$ implies an exponential function 
 
-<!–-break-–>
+<!--break-->
 
 
 

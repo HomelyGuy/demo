@@ -18,7 +18,7 @@ published: true
 
 If $$g$$ is Riemann-integrable in a closed interval and $$f$$ is a increasing function in a closed interval, is $$g\circ f$$ Riemann-integrable?
 
-<!–-break-–>
+<!--break-->
 
 
 

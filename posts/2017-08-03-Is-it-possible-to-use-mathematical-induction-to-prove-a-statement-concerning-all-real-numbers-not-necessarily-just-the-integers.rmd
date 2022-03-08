@@ -15,7 +15,7 @@ published: true
 
 is it possible to use mathematical induction to prove a statement concerning all real numbers, not necessarily just the integers?
 
-<!–-break-–>
+<!--break-->
 
 
 

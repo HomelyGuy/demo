@@ -30,7 +30,7 @@ $$
 
 show that $$f(x)$$ is strictly convex function or strictly concave function.
 
-<!–-break-–>
+<!--break-->
 
 # Answer
 

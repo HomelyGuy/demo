@@ -27,7 +27,7 @@ $$
 $$
 
 
-<!–-break-–>
+<!--break-->
 
 There is a known asymptotic expansion of [harmonic numbers](http://mathworld.wolfram.com/HarmonicNumber.html) $$H_n$$ for $$n\to\infty$$:
 

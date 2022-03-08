@@ -20,7 +20,7 @@ $$
 \end{equation*}
 $$
 
-<!–-break-–>
+<!--break-->
 
 Have you ever come across the infinite sum such as  
 

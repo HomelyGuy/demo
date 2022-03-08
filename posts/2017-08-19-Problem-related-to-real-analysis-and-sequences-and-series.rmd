@@ -16,7 +16,7 @@ published: true
 
 Self-Contained Proof that $$\sum\limits_{n=1}^{\infty} \frac1{n^p}$$ Converges for $$p > 1$$
 
-<!–-break-–>
+<!--break-->
 
 
 To prove the convergence of the p-series 

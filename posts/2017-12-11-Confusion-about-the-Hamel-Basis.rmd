@@ -18,7 +18,7 @@ published: true
 
 Confusion about the Hamel Basis
 
-<!–-break-–>
+<!--break-->
 
 
 Alright, so we are  reading a book on Hilbert spaces and functional analysis, and here it defines a "Hamel basis" to be a "maximal linearly independent set".

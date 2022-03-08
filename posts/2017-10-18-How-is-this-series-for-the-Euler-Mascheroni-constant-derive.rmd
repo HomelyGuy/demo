@@ -16,7 +16,7 @@ published: true
 
 How is this series for the Euler-Mascheroni constant derived?.
 
-<!–-break-–>
+<!--break-->
 
 
 We are familiar with the classic sum for Euler's constant $$\gamma$$:

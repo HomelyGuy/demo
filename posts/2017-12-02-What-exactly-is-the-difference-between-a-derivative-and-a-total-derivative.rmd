@@ -16,7 +16,7 @@ published: true
 
 What exactly is the difference between a derivative and a total derivative?
 
-<!–-break-–>
+<!--break-->
 
 
 we are  not too grounded in differentiation but today, we was posed with a supposedly easy question $$w = f(x,y) = x^2 + y^2$$ where $$x = r\sin\theta $$ and $$y = r\cos\theta$$ requiring the solution to $$\partial w / \partial r$$ and $$\partial w / \partial \theta $$.

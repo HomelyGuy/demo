@@ -16,7 +16,7 @@ published: true
 
 Examples of bijective map from $$\mathbb{R}^3\rightarrow \mathbb{R}$$ 
 
-<!–-break-–>
+<!--break-->
 
 
 

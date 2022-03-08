@@ -19,7 +19,7 @@ published: true
 
 Topologically, is there a definition of differentiability that is dependent on the underlying topology, similar to continuity?
 
-<!–-break-–>
+<!--break-->
 
 
 we are  studying Analysis on Manifolds by Munkres, and at page 199, it is given that 

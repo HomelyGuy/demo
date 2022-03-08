@@ -19,7 +19,7 @@ published: true
 
 Does convexity of a 'norm' imply the triangle inequality?
 
-<!–-break-–>
+<!--break-->
 
 
 Given a vector space $$V$$ (for convenience, defined over $$\mathbb{r}$$), we call $$d:V\rightarrow\mathbb{R}$$ a norm for $$V$$ if $$\forall \mathbf{u}, \mathbf{v} \in V$$ and $$\forall r \in \mathbb{R}$$ we have:

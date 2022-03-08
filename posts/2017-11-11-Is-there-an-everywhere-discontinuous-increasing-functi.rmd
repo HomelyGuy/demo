@@ -16,7 +16,7 @@ published: true
 
 Is there an everywhere discontinuous increasing function?
 
-<!–-break-–>
+<!--break-->
 
 
 Does there exist a function $$f : \mathbb{R} \rightarrow \mathbb{R}$$ that is strictly increasing and discontinuous everywhere?

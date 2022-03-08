@@ -16,7 +16,7 @@ published: true
 
 Bounding the Gamma Function
 
-<!–-break-–>
+<!--break-->
 
 
 we are  trying to verify a bound for the gamma function

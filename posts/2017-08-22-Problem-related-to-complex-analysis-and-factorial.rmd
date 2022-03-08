@@ -17,7 +17,7 @@ published: true
 
 Why is $$i! = 0.498015668 - 0.154949828i$$?
 
-<!–-break-–>
+<!--break-->
 
 
 While moving my laptop the other day, we  ended up mashing the keyboard a little, and by pure chance managed to do a google search for i!.

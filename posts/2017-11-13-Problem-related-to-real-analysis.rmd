@@ -15,7 +15,7 @@ published: true
 
 if $$f:[0,1] \to \mathbb{R}$$ is increasing, show that $$f$$ is the pointwise limit of a sequence of continuous functions over $$[0,1]$$ 
 
-<!–-break-–>
+<!--break-->
 
 
 Clearly there is a sequence converging pointwise to $$f$$, we can set:

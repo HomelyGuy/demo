@@ -19,7 +19,7 @@ published: true
 
 Why is $$1^{\infty}$$ considered to be an indeterminate form
 
-<!–-break-–>
+<!--break-->
 
 
 From Wikipedia: in calculus and other branches of mathematical analysis, an indeterminate form is an algebraic expression obtained in the context of limits. Limits involving algebraic operations are often performed by replacing subexpressions by their limits; if the expression obtained after this substitution does not give enough information to determine the original limit, it is known as an indeterminate form. 

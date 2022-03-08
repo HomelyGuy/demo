@@ -27,7 +27,7 @@ $$
 $$
 
 
-<!–-break-–>
+<!--break-->
 
 Consider these two similar integrals
 

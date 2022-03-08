@@ -17,7 +17,7 @@ published: true
 
 How discontinuous can a derivative be?
 
-<!–-break-–>
+<!--break-->
 
 
 There is a well-known result in elementary analysis due to Darboux which says if $$f$$ is a differentiable function then $$f'$$ satisfies the intermediate value property.  To my knowledge, not many "highly" discontinuous Darboux functions are known--the only one we are  aware of being the Conway base 13 function--and few (none?) of these are derivatives of differentiable functions.  in fact they generally cannot be since an application of Baire's theorem gives that the set of continuity points of the derivative is dense $$G_\delta$$.

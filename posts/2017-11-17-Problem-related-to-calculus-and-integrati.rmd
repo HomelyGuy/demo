@@ -17,7 +17,7 @@ published: true
 
 Showing that $$\int\limits_{-a}^a \frac{f(x)}{1+e^{x}} \mathrm dx = \int\limits_0^a f(x) \mathrm dx$$, when $$f$$ is even
 
-<!–-break-–>
+<!--break-->
 
 
 we have a question:

@@ -19,7 +19,7 @@ published: true
 
 A Hamel basis for $$\ell^p$$?
 
-<!–-break-–>
+<!--break-->
 
 
 we are  looking for an explicit example for a Hamel basis for  $$\ell^{p}$$?.

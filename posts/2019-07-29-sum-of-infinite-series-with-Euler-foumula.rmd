@@ -25,7 +25,7 @@ $$
 \end{equation*}
 $$
 
-<!–-break-–>
+<!--break-->
 
 The definition of integrals suggests me that it is a double integrals, but does not trigger an solution 
 easily. The most intuitive ideals we can think, in my opinion, are harmonic numbers.

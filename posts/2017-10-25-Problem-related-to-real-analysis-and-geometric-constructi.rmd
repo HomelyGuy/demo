@@ -18,7 +18,7 @@ published: true
 
 Direct proof that $$\pi$$ is not constructible
 
-<!–-break-–>
+<!--break-->
 
 
 Is there a direct proof that $$\pi$$ is not constructible, that is, that squaring the circle cannot be done by rule and compass?

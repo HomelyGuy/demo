@@ -17,7 +17,7 @@ published: true
 
 Two monotone functions which equal on rational numbers
 
-<!–-break-–>
+<!--break-->
 
 
 Let $$f,g:\mathbb R\to \mathbb R$$ be increasing and $$f(r)=g(r)$$ for every $$r\in\mathbb Q$$.

@@ -17,7 +17,7 @@ published: true
 
 How to define a bijection between $$(0,1)$$ and $$(0,1]$$?
 
-<!–-break-–>
+<!--break-->
 
 
 

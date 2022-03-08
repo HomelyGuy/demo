@@ -16,7 +16,7 @@ published: true
 
 What is the Definition of Linear Algebra?
 
-<!–-break-–>
+<!--break-->
 
 
 For introducing a field of science, usually we require a definition which summarizes the goal which is intended to be achieved by this field.

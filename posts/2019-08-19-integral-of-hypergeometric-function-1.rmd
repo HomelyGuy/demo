@@ -26,7 +26,7 @@ $$
 
 Notation: $$  \dbinom{2n}n $$  denotes the central binomial coefficient, $$  \dfrac{(2n)!}{(n!)^2} $$.
 
-<!–-break-–>
+<!--break-->
 
 We have the following examples (all verified by WolframAlpha) for $$  m\geq 0$$:
 

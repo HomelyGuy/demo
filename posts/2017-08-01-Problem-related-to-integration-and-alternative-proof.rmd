@@ -17,7 +17,7 @@ published: true
 
 we integral $$\int_0^1 \frac{dx}{\sqrt[3]{x(1-x)}(1-x(1-x))}$$
 
-<!–-break-–>
+<!--break-->
 
 
 

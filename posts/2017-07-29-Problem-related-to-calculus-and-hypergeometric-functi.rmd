@@ -19,7 +19,7 @@ published: true
 
 Prove $${\large\int}_0^\infty\left({_2F_1}\left(\frac16,\frac12;\frac13;-x\right)\right)^{12}dx\stackrel{\color{#808080}?}=\frac{80663}{153090}$$
 
-<!–-break-–>
+<!--break-->
 
 
 I discovered the following conjectured identity numerically (it holds with at least $$1000$$ digits of precision). How can I prove it?

@@ -18,7 +18,7 @@ published: true
 
 The category of rings with $$1$$ vs the category of rings with or without $$1$$
 
-<!–-break-–>
+<!--break-->
 
 
 The question of whether the definition of a ring should include the existence of an identity for the multiplication (and whether homomorphisms should preserve this identity) seems to divide many mathematicians.

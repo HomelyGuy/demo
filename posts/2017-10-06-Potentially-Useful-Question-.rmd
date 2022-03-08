@@ -15,7 +15,7 @@ published: true
 
 Potentially Useful Question
 
-<!–-break-–>
+<!--break-->
 
  i want to solve for: 
 $$\sum_{n=1}^{\infty} \dfrac{1}{n^4} =$$ ?

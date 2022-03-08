@@ -18,7 +18,7 @@ published: true
 
 An alternative proof for sum of alternating series evaluates to $$\frac{\pi}{4}\sec\left(\frac{a\pi}{4}\right)$$
 
-<!–-break-–>
+<!--break-->
 
 
 How does one prove the given series? 

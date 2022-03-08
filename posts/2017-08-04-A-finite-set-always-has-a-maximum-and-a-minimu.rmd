@@ -17,7 +17,7 @@ published: true
 
 A finite set always has a maximum and a minimum.
 
-<!–-break-–>
+<!--break-->
 
 
 we are  pretty confident that this statement is true. However, we are  not sure how to prove it. Any hints/ideas/answers would be appreciated.

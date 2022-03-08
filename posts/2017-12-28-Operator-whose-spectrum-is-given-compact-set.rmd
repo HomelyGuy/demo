@@ -15,7 +15,7 @@ published: true
 
 Operator whose spectrum is given compact set
 
-<!–-break-–>
+<!--break-->
 
 
 Let $$A\subset \mathbb{C}$$ be a compact subset.

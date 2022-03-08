@@ -17,7 +17,7 @@ published: true
 
 Tricky contour integral resulting from the integration of $$\sin ax / (x^2+b^2)$$ over the positive halfline
 
-<!–-break-–>
+<!--break-->
 
 
 i are  trying to evaluate the definite integral

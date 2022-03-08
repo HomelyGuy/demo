@@ -16,7 +16,7 @@ published: true
 
 Prove that this summation evaluates out to $$\zeta(2)-1$$
 
-<!–-break-–>
+<!--break-->
 
 
 we are  aware of the following identity:

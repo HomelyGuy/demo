@@ -17,7 +17,7 @@ published: true
 
 If $$f \in L^{\infty}$$ and $$\exists r < \infty$$ so that $$\|f\|_r < \infty$$, show $$\lim_{p \rightarrow \infty} \|f\|_p = \|f\|_{\infty}$$ 
 
-<!–-break-–>
+<!--break-->
 
 
 Let $$(X,\mu)$$ be a possibly infinite measure space. Assume $$\exists r < \infty$$ with $$\|f\|_r < \infty$$ and that $$\|f \|_{\infty} < \infty$$. Show that $$\lim_{p \rightarrow \infty} \|f_p\| = \|f\|_{\infty}$$. 

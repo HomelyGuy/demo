@@ -18,7 +18,7 @@ published: true
 
 Inner product on $$C(\mathbb R)$$
 
-<!–-break-–>
+<!--break-->
 
 
 With Axiom of choice it is possible to construct an inner product on $$C(\mathbb R)$$.

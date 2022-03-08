@@ -18,7 +18,7 @@ published: true
 
 Evaluating $$\int_0^{2\pi}\frac{dt}{\sqrt[4]{P(\cos t,\sin t)}}$$
 
-<!–-break-–>
+<!--break-->
 
 
 

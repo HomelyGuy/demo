@@ -15,7 +15,7 @@ published: true
 
 Definition of the gamma function for non-integer negative values
 
-<!–-break-–>
+<!--break-->
 
 
 The gamma function is defined as 

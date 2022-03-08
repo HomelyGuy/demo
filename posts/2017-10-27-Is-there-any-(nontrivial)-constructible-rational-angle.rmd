@@ -16,7 +16,7 @@ published: true
 
 Is there any (nontrivial) constructible rational angle?
 
-<!–-break-–>
+<!--break-->
 
 
 Yesterday, we talked with a friend about a problem where the solution would be an angle of $$2$$ radians (about $$114.

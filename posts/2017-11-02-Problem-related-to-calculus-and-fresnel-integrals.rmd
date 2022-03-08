@@ -19,7 +19,7 @@ published: true
 
 Proof only by transformation that : $$ \int_0^\infty \cos(x^2) dx = \int_0^\infty \sin(x^2) dx $$
 
-<!–-break-–>
+<!--break-->
 
 
 This was a  question in our exam and we did not know which change of variables or trick to apply 

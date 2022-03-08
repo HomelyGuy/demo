@@ -15,7 +15,7 @@ published: true
 
 Increasing function on R that is discontinuous on the rationals
 
-<!–-break-–>
+<!--break-->
 
 
 The question (Folland's Real Analysis, 3.

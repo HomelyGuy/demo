@@ -16,7 +16,7 @@ published: true
 
 Fundamental Theorem of Calculus
 
-<!–-break-–>
+<!--break-->
 
 
 The Fundamental Theorem of Calculus says the following:

@@ -17,7 +17,7 @@ published: true
 
 Find a real function $$f:\mathbb{R}\to\mathbb{R}$$ such that $$f(f(x)) = -x$$?
 
-<!–-break-–>
+<!--break-->
 
 
 we 've been perusing the internet looking for interesting problems to solve. we  found the following problem and have been going at it for the past 30 minutes with no success:

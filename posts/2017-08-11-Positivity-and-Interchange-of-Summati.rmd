@@ -16,7 +16,7 @@ published: true
 
 Positivity and interchange of Summation
 
-<!–-break-–>
+<!--break-->
 
 
 Suppose we  have $$\sum\limits_{n = 1}^{\infty}\sum\limits_{m = 1}^{\infty} a_{m, n}$$ where $$a_{m, n} \geq 0$$ for all $$m$$ and $$n$$. Can we  interchange the two summations? if so why?

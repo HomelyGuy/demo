@@ -18,7 +18,7 @@ published: true
 
 Sum of random decreasing numbers between 0 and 1: does it converge??
 
-<!–-break-–>
+<!--break-->
 
 
 Let's define a sequence of numbers between 0 and 1. The first term, $$r_1$$ will be chosen uniformly randomly from $$(0, 1)$$, but now we iterate this process choosing $$r_2$$ from $$(0, r_1)$$, and so on, so $$r_3\in(0, r_2)$$, $$r_4\in(0, r_3)$$... The set of all possible sequences generated this way contains the sequence of the reciprocals of all natural numbers, which sum diverges; but it also contains all geometric sequences in which all terms are less than 1, and they all have convergent sums. The question is: does $$\sum_{n=1}^{\infty} r_n$$ converge in general? (we  think this is called almost sure convergence?) we f so, what is the distribution of the limits of all convergent series from this family?

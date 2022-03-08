@@ -16,7 +16,7 @@ published: true
 
 is every function with the intermediate value property a derivative?
 
-<!–-break-–>
+<!--break-->
 
 
 As it is well known every continuous function has the intermediate value property, but even some discontinuous functions like 

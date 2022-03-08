@@ -19,7 +19,7 @@ published: true
 
 Any open subset of $$\Bbb R$$ is a at most countable union of disjoint open intervals. 
 
-<!–-break-–>
+<!--break-->
 
 
 This question has probably been asked. However, we are  not interested in just getting the answer to it. Rather, we are  interested in collecting as many different proofs of it which are as diverse as possible. A professor told me that there are many. So, we  invite everyone who has seen proofs of this fact to share them with the community. we  think it is a result worth knowing how to prove in many different ways and having a post that combines as many of them as possible will, no doubt, be quite useful. After two days, we  will place a bounty on this question to attract as many people as possible. Of course, any comments, corrections, suggestions, links to papers/notes etc. are more than welcome.

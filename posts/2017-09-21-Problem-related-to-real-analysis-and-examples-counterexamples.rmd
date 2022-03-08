@@ -19,7 +19,7 @@ published: true
 
 Is it possible for a function to be in $$L^p$$ for only one $$p$$?
 
-<!–-break-–>
+<!--break-->
 
 
 we are  wondering if it's possible for a function to be an $$L^p$$ space for only one value of $$p \in [1,\infty)$$ (on either a bounded domain or an unbounded domain).

@@ -18,7 +18,7 @@ published: true
 
 Difference between metric and norm made concrete: The case of Euclid
 
-<!–-break-–>
+<!--break-->
 
 
 This is a follow-up question on this one.

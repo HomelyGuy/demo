@@ -15,7 +15,7 @@ published: true
 
 Show that $$f$$ has at most one fixed point
 
-<!–-break-–>
+<!--break-->
 
 
 Let $$f\colon\mathbb{R}\to\mathbb{R}$$ be a differentiable function.

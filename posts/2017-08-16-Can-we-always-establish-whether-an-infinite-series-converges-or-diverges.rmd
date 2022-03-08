@@ -17,7 +17,7 @@ published: true
 
 Can we always establish whether an infinite series converges or diverges?
 
-<!–-break-–>
+<!--break-->
 
 
 we are  currently working with infinite series for my calculus class, and we are  wondering whether we always (in theory) can establish whether a series is divergent or convergent? Of course, it might be computationally hard, but are there a class of series where we simply lack the tools to determine whether the series converges or diverges?

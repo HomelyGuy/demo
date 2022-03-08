@@ -19,7 +19,7 @@ published: true
 
 Does the open mapping theorem imply the Baire category theorem?
 
-<!–-break-–>
+<!--break-->
 
 
 A nice observation by C.

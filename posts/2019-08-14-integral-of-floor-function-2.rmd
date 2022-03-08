@@ -28,7 +28,7 @@ Prove that :
  $$ 
 
 
-<!–-break-–>
+<!--break-->
 
 # Answer
 

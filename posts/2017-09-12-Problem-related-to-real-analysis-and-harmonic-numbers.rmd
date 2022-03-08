@@ -19,7 +19,7 @@ published: true
 
 Infinite Series $$\sum\limits_{n=1}^\infty\frac{(H_n)^2}{n^3}$$
 
-<!–-break-–>
+<!--break-->
 
 
 How to prove that

@@ -17,7 +17,7 @@ published: true
 
 Proving an alternating Euler sum: $$\sum_{k=1}^{\infty} \frac{(-1)^{k+1} H_k}{k} = \frac{1}{2} \zeta(2) - \frac{1}{2} \log^2 2$$
 
-<!–-break-–>
+<!--break-->
 
 
 Let 

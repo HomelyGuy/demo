@@ -17,7 +17,7 @@ published: true
 
 we n-Depth Explanation of How to Do Mathematical we nduction Over the Set $$\mathbb{R}$$ of All Real Numbers?
 
-<!–-break-–>
+<!--break-->
 
 
      we 've seen in the answers to a few different questions here on the Mathematics Stack Exchange that one can clearly do mathematical induction over the set $$\mathbb{R}$$ of all real numbers.  we are , however, having quite a difficult time understanding how the methods described in both those questions' answers and some reference materials to which they link.  in particular,  we  can't seem to figure out exactly how the techniques described therein parallel the methods codified in the axiom of induction for use when doing mathematical induction over the set $$\mathbb{N}$$ of all natural numbers.

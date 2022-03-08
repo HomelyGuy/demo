@@ -16,7 +16,7 @@ published: true
 
 Some way to integrate $$\sin(x^2)$$? 
 
-<!–-break-–>
+<!--break-->
 
 
 Knowing that $$\int_{-\infty}^{\infty}\exp{(-x^2)} \, dx = \sqrt \pi$$ one can feel that this value has to be somehow "divided" over the entire complex plane, so that every quadrant gets some part of $$\sqrt \pi$$.

@@ -16,7 +16,7 @@ published: true
 
 Evaluate $$ \int_{-\pi/2}^{\pi/2} \frac{\cos(x)}{1+e^x} dx$$ 
 
-<!–-break-–>
+<!--break-->
 
 
 

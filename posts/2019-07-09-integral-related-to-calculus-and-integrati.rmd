@@ -28,7 +28,7 @@ I found a nice formula of the following integral here
 
 It states there that it can be proved by using contours method which I do not understand. It seems that the RHS is Euler's reflection formula for the gamma function but I am not so sure.
 
-<!–-break-–>
+<!--break-->
 
 # Answer 
 

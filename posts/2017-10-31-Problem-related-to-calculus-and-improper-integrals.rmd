@@ -17,7 +17,7 @@ published: true
 
 Generalizing the trick for integrating $$\int_{-\infty}^\infty e^{-x^2}\mathrm dx$$?
 
-<!–-break-–>
+<!--break-->
 
 
 There is a well-known trick for integrating $$\int_{-\infty}^\infty e^{-x^2}\mathrm dx$$, which is to write it as $$\sqrt{\int_{-\infty}^\infty e^{-x^2}\mathrm dx\int_{-\infty}^\infty e^{-y^2}\mathrm dy}$$, which can then be reexpressed in polar coordinates as an easy integral.

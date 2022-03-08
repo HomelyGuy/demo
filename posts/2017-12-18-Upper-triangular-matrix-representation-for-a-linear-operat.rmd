@@ -15,7 +15,7 @@ published: true
 
 Upper triangular matrix representation for a linear operator
 
-<!–-break-–>
+<!--break-->
 
 
 we just the read the proof that every linear operator over finite-dimensional complex vector space has an upper triangular matrix with respect to some basis of $$V$$ (pretty neat fact!).

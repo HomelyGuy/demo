@@ -47,7 +47,7 @@ x & \displaystyle\sum_{n=0}^\infty {1\over (xn)!} \\[1ex]
 
 Is there any closed form for this, or some other function that it can be expressed in?
 
-<!–-break-–>
+<!--break-->
 
 
 # Answer

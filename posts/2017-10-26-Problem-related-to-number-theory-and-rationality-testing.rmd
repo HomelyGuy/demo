@@ -19,7 +19,7 @@ published: true
 
 Irrationality of $$\pi^2$$ and $$\pi^3$$
 
-<!–-break-–>
+<!--break-->
 
 
 we wonder if there is any book and/or article you can recommend on the topic "Irrationality of $$\pi^2$$ and $$\pi^3$$" for me to study on.

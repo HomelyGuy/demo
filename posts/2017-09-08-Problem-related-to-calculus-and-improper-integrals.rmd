@@ -19,7 +19,7 @@ published: true
 
 Prove that $$\int_0^\infty \frac{e^{\cos(ax)}\cos\left(\sin (ax)+bx\right)}{c^2+x^2}dx =\frac{\pi}{2c}\exp\left(e^{-ac}-bc\right)$$
 
-<!–-break-–>
+<!--break-->
 
 
 In my course, we have to prove formula below

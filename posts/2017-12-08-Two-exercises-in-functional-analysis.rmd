@@ -15,7 +15,7 @@ published: true
 
 Two exercises in functional analysis.
 
-<!–-break-–>
+<!--break-->
 
 
 we have met two questions which, after some attempts have we have yet been able to solve nor find any available solutions online.

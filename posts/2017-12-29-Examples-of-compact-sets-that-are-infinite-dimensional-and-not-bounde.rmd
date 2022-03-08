@@ -19,7 +19,7 @@ published: true
 
 Examples of compact sets that are infinite dimensional and not bounded
 
-<!–-break-–>
+<!--break-->
 
 
 In an infinite dimensional Banach space, does a compact subset have to be finite dimensional? we know it cannot contain any infinite dimensional balls, if this mean it has to be finite dimensional, then why do we sometimes see phrases like "for any compact subspaces of some vector space"?

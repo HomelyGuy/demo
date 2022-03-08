@@ -17,7 +17,7 @@ published: true
 
 Simplest proof of Taylor's theorem
 
-<!–-break-–>
+<!--break-->
 
 
 we have for some time been trawling through the Internet looking for an aesthetic proof of Taylor's theorem.

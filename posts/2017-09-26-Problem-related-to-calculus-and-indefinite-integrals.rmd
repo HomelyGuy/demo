@@ -18,7 +18,7 @@ published: true
 
 The deep reason why $$\int \frac{1}{x}\operatorname{d}x$$ is a transcendental function ($$\log$$)
 
-<!–-break-–>
+<!--break-->
 
 
 In general, the indefinite integral of $$x^n$$  has power $$n+1$$.  This is the standard power rule.  Why does it "break" for $$n=-1$$?  In other words, the derivative rule 

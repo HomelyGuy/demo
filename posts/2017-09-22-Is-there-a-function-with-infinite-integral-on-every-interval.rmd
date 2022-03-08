@@ -17,7 +17,7 @@ published: true
 
 Is there a function with infinite integral on every interval?
 
-<!–-break-–>
+<!--break-->
 
 
 Could give some examples of nonnegative measurable function $$f:\mathbb{R}\to[0,\infty)$$, such that its integral over any bounded interval is infinite?

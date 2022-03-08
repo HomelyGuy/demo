@@ -18,7 +18,7 @@ published: true
 
 Are there any series whose convergence is unknown?
 
-<!–-break-–>
+<!--break-->
 
 
 Are there any infinite series about which we don't know whether it converges or not? Or are the convergence tests exhaustive, so that in the hands of a competent mathematician any series will eventually be shown to converge or diverge?

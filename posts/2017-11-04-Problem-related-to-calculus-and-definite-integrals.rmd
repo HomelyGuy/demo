@@ -17,7 +17,7 @@ published: true
 
 Integral: $$\int_0^\infty \tan^{-1}\left(\frac{2ax}{x^2+c^2} \right)\sin(bx) \; dx$$
 
-<!–-break-–>
+<!--break-->
 
 prophpbb.
 com/post2652.

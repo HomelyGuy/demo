@@ -18,7 +18,7 @@ published: true
 
 Epimorphisms of locally compact spaces
 
-<!–-break-–>
+<!--break-->
 
 
 Let $$LCH$$ be the category of locally compact Hausdorff spaces with proper continuous maps.

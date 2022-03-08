@@ -28,7 +28,7 @@ $$
 
 
 
-<!–-break-–>
+<!--break-->
 
 Let $$H_q$$ denote harmonic numbers (generalized to a non-integer index $$q$$):
 

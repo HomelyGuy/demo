@@ -18,7 +18,7 @@ published: true
 
 How to prove that $$\frac{\zeta(2) }{2}+\frac{\zeta (4)}{2^3}+\frac{\zeta (6)}{2^5}+\frac{\zeta (8)}{2^7}+\cdots=1$$?
 
-<!–-break-–>
+<!--break-->
 
 
 How can one prove this identity? 

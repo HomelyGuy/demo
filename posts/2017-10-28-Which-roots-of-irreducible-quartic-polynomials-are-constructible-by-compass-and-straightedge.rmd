@@ -16,7 +16,7 @@ published: true
 
 Which roots of irreducible quartic polynomials are constructible by compass and straightedge?
 
-<!–-break-–>
+<!--break-->
 
 
 A problem in Artin's Algebra, 2nd ed.

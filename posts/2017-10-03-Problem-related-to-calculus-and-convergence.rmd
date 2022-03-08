@@ -19,7 +19,7 @@ published: true
 
 Compute $$\lim_{n\to\infty}n^4\int_0^1\frac{x^n\ln^3x}{1+x^n}\ln(1-x)\,dx$$
 
-<!–-break-–>
+<!--break-->
 
 
 Compute

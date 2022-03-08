@@ -16,7 +16,7 @@ published: true
 
 Spectral radius in Banach Algebra
 
-<!–-break-–>
+<!--break-->
 
 
 Let $$A$$ be a unital Banach algebra and $$a\in A$$ and $$\lambda \in \rho(a)$$.

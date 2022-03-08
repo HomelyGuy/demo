@@ -17,7 +17,7 @@ published: true
 
 prove $$\int_0^\infty \frac{\log^2(x)}{x^2+1}\mathrm dx=\frac{\pi^3}{8}$$ with real methods
 
-<!–-break-–>
+<!--break-->
 
 
 Context: we looked up "complex residue" on google images, and saw this integral.

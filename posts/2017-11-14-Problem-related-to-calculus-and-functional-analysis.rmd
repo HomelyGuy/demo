@@ -17,7 +17,7 @@ published: true
 
 Prove there is an increasing function on closed bounded interval that is continuous only at points in $$[a,b] \setminus C$$
 
-<!–-break-–>
+<!--break-->
 
 
 

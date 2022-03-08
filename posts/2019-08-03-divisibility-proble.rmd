@@ -22,7 +22,7 @@ $$
 
 is divisible by $$x^{n+1}$$
 
-<!–-break-–>
+<!--break-->
 
 # Answer
 

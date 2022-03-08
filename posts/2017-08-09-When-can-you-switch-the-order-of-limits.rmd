@@ -17,7 +17,7 @@ published: true
 
 When can you switch the order of limits?
 
-<!–-break-–>
+<!--break-->
 
 
 Suppose you have a double sequence $$\displaystyle a_{nm}$$.  What are sufficient conditions for you to be able to say that $$\displaystyle \lim_{n\to \infty}\,\lim_{m\to \infty}{a_{nm}} = \lim_{m\to \infty}\,\lim_{n\to \infty}{a_{nm}}$$?  Bonus points for necessary and sufficient conditions.

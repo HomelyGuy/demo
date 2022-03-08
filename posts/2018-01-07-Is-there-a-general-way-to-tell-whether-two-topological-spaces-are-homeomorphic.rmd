@@ -17,7 +17,7 @@ published: true
 
 Is there a general way to tell whether two topological spaces are homeomorphic?
 
-<!–-break-–>
+<!--break-->
 
 
 We know that if two topological spaces $$X$$ and $$Y$$ are homeomorphic, then they have the same fundamental groups, and the same homology.

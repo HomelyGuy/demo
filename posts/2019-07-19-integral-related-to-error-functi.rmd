@@ -28,7 +28,7 @@ $$
 $$
 
 
-<!–-break-–>
+<!--break-->
 
 Consider the following integral:
 

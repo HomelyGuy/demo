@@ -16,7 +16,7 @@ published: true
 
 Proving that $$\sum\limits_{n=2}^{\infty }\frac{\zeta (n)}{2^{n-1}}=\log(4)$$
 
-<!–-break-–>
+<!--break-->
 
 
 

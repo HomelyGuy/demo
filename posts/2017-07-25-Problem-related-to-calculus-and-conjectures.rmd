@@ -19,7 +19,7 @@ published: true
 
 Is $$K\left(\frac{\sqrt{2-\sqrt3}}2\right)\stackrel?=\frac{\Gamma\left(\frac16\right)\Gamma\left(\frac13\right)}{4\ \sqrt[4]3\ \sqrt\pi}$$
 
-<!–-break-–>
+<!--break-->
 
 
 Working on this conjecture, I found its corollary, which is also supported by numeric calculations up to at least $$10^5$$ decimal digits:

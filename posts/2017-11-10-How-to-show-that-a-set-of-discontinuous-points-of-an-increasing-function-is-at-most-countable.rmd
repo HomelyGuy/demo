@@ -15,7 +15,7 @@ published: true
 
 How to show that a set of discontinuous points of an increasing function is at most countable
 
-<!–-break-–>
+<!--break-->
 
 
 we would like to prove the following:  

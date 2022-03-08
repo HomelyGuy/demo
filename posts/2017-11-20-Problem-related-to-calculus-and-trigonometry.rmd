@@ -17,7 +17,7 @@ published: true
 
 How to prove that $$\int\limits_{-\pi/2}^{\pi/2}\frac{\cos(2x)}{e^x+1}=0$$?
 
-<!–-break-–>
+<!--break-->
 
 
 we are  stuck trying to show that $$\displaystyle \int\limits_{-\pi/2}^{\pi/2}\frac{\cos(2x)}{e^x+1}=0$$ 

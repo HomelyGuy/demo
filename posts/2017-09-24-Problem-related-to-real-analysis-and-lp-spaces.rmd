@@ -19,7 +19,7 @@ published: true
 
 The $$ l^{\infty} $$-norm is equal to the limit of the $$ l^{p} $$-norms.
 
-<!–-break-–>
+<!--break-->
 
 
 The $$ l^{\infty} $$-norm of $$ \mathbf{x} $$ is $$ \displaystyle \sup_{i \in \mathbb{N}} |x_{i}| $$.

@@ -19,7 +19,7 @@ published: true
 
 How can you prove that a function has no closed form integral?
 
-<!–-break-–>
+<!--break-->
 
 
 we 've come across statements in the past along the lines of "function $$f(x)$$ has no closed form integral", which we  assume means that there is no combination of the operations:

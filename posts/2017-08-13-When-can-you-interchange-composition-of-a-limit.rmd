@@ -16,7 +16,7 @@ published: true
 
 When can you interchange composition of a limit?
 
-<!–-break-–>
+<!--break-->
 
 
 we 've seen some limit problems where you can do this:

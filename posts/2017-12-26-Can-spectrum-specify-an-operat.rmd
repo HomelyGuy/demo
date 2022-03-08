@@ -17,7 +17,7 @@ published: true
 
 Can spectrum “specify” an operator?
 
-<!–-break-–>
+<!--break-->
 
 
 Given a bounded operator $$A$$ on a Banach space $$X$$, one may find the spectrum $$\sigma(A)\subset{\bf C}$$.

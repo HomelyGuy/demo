@@ -17,7 +17,7 @@ published: true
 
 Can one show that $$\sum_{n=1}^N\frac{1}{n} -\log N - \gamma \leqslant \frac{1}{2N}$$ without using the Euler-Maclaurin formula?
 
-<!–-break-–>
+<!--break-->
 
 
 we would like to prove that

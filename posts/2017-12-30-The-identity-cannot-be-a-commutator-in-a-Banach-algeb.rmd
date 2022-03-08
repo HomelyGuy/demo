@@ -16,7 +16,7 @@ published: true
 
 The identity cannot be a commutator in a Banach algebra?
 
-<!–-break-–>
+<!--break-->
 
 
 The Wikipedia article on Banach algebras claims, without a proof or reference, that there does not exist a (unital) Banach algebra $$B$$ and elements $$x, y \in B$$ such that $$xy - yx = 1$$.

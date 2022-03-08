@@ -19,7 +19,7 @@ published: true
 
 is there a gamma-like function for the q-factorial?
 
-<!–-break-–>
+<!--break-->
 
 
 we are  looking at quantum calculus and just trying to understand what is going with this subject. Looking at the q-factorial made me wonder if this function could take all real or even complex numbers in the same way that $$\Gamma (z)$$ works as an extension of $$f(n) =n!$$. Since, we  need practice with both $$\Gamma $$ and q-analogs, would it be a good project to try to recreate $$\Gamma (z)$$ in this new setting or is the whole project lacking in sanity, mathematical soundness?

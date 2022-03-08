@@ -16,7 +16,7 @@ published: true
 
 Are some indefinite integrals impossible to compute or just don't exist?
 
-<!–-break-–>
+<!--break-->
 
 
 How can you prove that a function has no closed form integral?

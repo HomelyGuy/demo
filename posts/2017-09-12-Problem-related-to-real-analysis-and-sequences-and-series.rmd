@@ -16,7 +16,7 @@ published: true
 
 Evaluate:: $$ 2 \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n+1}\left( 1 + \frac12 +\cdots + \frac 1n\right) $$
 
-<!–-break-–>
+<!--break-->
 
 
 How to evaluate the series:

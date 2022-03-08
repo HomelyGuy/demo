@@ -16,7 +16,7 @@ published: true
 
 How do we divide a function into even and odd sections?
 
-<!–-break-–>
+<!--break-->
 
 
 While working on a proof showing that all functions limited to the domain of real numbers can be expressed as a sum of their odd and even components, we stumbled into a troublesome roadblock; namely, we had no clue how one divides the function into these even and odd parts.

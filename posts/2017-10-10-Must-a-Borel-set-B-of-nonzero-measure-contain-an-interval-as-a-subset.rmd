@@ -16,7 +16,7 @@ published: true
 
 Must a Borel set B of nonzero measure contain an interval as a subset?
 
-<!–-break-–>
+<!--break-->
 
 
 Assume we are working in the reals under the standard Lebesgue measure.

@@ -17,7 +17,7 @@ published: true
 
 Strictly speaking, is it true that $$\zeta(-1)\ne1+2+3+\cdots$$?
 
-<!–-break-–>
+<!--break-->
 
 
 There are various notorious proofs that $$1+2+3+\cdots=\frac{-1}{12}.$$

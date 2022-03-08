@@ -16,7 +16,7 @@ published: true
 
 Is $$\sum_{n=1}^{\infty }\frac{8n\cdot\zeta (2n)}{3\cdot 2^{2n}}=\zeta (2)$$?
 
-<!–-break-–>
+<!--break-->
 
 
 

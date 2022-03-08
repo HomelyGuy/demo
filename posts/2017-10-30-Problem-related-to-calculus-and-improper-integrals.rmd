@@ -17,7 +17,7 @@ published: true
 
 Prove: $$\int_0^\infty \sin (x^2) \, dx$$ converges.
 
-<!–-break-–>
+<!--break-->
 
 
 $$\sin x^2$$ does not converge as $$x \to \infty$$, yet its integral from $$0$$ to $$\infty$$ does.

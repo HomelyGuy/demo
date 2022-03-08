@@ -16,7 +16,7 @@ published: true
 
 Chain rule for partial derivatives intuition
 
-<!–-break-–>
+<!--break-->
 
 
 Can somebody give me an intuitive explanation for the below equations.

@@ -18,7 +18,7 @@ published: true
 
 How can a function with a hole (removable discontinuity) equal a function with no hole?
 
-<!–-break-–>
+<!--break-->
 
 
 we have  done some research, and we are  hoping someone can check me.

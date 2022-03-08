@@ -19,7 +19,7 @@ published: true
 
 Innocent looking open problems in real analysis
 
-<!–-break-–>
+<!--break-->
 
 
 Are there any apparently easy problems or conjectures in basic real analysis (that is, calculus) that are still open? By apparently easy, we mean: so much so, that, if it was for the statement alone, they could be part of a calculus book for undergraduates?

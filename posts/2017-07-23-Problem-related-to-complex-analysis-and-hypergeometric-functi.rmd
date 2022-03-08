@@ -18,7 +18,7 @@ published: true
 
 Closed form for $$_2F_1\left(\frac12,\frac23;\,\frac32;\,\frac{8\,\sqrt{11}\,i-5}{27}\right)$$
 
-<!–-break-–>
+<!--break-->
 
 
 I'm trying to find a closed form (in terms of simpler functions) for the following hypergeometric function with a complex argument:

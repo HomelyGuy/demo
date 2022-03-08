@@ -16,7 +16,7 @@ published: true
 
 Is is possible to double the cube using compass, straightedge, and angle trisector?
 
-<!–-break-–>
+<!--break-->
 
 
 Essentially an angle trisector would allow you to construct a root of $$4x^3 - 3x - a$$ for any constructible $$a$$ with $$\|a\| \le 1$$.

@@ -18,7 +18,7 @@ published: true
 
 Lebesgue integral basics
 
-<!–-break-–>
+<!--break-->
 
 
 we are  having trouble finding a good explanation of the Lebesgue integral. As per the definition, it is the expectation of a random variable. Then how does it model the area under the curve? Let's take for example a function $$f(x) = x^2$$.  How do we find the integral of $$f(x)$$ under $$[0,1]$$ using the Lebesgue integral?

@@ -18,7 +18,7 @@ published: true
 
 Why can't differentiability be generalized as nicely as continuity?
 
-<!–-break-–>
+<!--break-->
 
 
 The question: Can we define differentiable functions between (some class of) sets, "without $$\Bbb R$$"* so that it

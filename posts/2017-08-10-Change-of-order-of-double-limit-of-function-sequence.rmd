@@ -18,7 +18,7 @@ published: true
 
 Change of order of double limit of function sequence
 
-<!–-break-–>
+<!--break-->
 
 
 The more general quesion is under what conditions the folloing equality will hold (all functions are real valued):

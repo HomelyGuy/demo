@@ -17,7 +17,7 @@ published: true
 
 Commutativity of iterated limits
 
-<!–-break-–>
+<!--break-->
 
 
 The following is a weird result we 've obtained with iterated limits.

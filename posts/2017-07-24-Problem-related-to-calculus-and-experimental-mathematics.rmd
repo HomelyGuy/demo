@@ -19,7 +19,7 @@ published: true
 
 On Reshetnikov's integral $$\int_0^1\frac{dx}{\sqrt[3]x\ \sqrt[6]{1-x}\ \sqrt{1-x\,\alpha^2}}=\frac{1}{N}\,\frac{2\pi}{\sqrt{3}\,\mid {} \alpha\mid {} }$$
 
-<!–-break-–>
+<!--break-->
 
 
 V. Reshetnikov gave the remarkable integral,

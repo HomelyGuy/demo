@@ -19,7 +19,7 @@ published: true
 
 Let, $$A\subset\mathbb{R}^2$$. Show that $$A$$ can contain at most one point $$p$$ such that $$A$$ is isometric to $$A \setminus \{p\}$$.
 
-<!–-break-–>
+<!--break-->
 
 
 A challenge problem from Sally's Fundamentals of Mathematical Analysis.

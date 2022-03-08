@@ -17,7 +17,7 @@ published: true
 
 On the horizontal integration of the Lebesgue integral
 
-<!–-break-–>
+<!--break-->
 
 
 we are  studying Lebesgue integral and its difference with respect to the Riemann one.

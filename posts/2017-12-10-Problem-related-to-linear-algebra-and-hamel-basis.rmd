@@ -19,7 +19,7 @@ published: true
 
 What is the basis of the vector space $$l^\infty$$?
 
-<!–-break-–>
+<!--break-->
 
 
 We know that every vector space has a Hamel basis and also every normed space need not have a Schauder basis.

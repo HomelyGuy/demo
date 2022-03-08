@@ -19,7 +19,7 @@ published: true
 
 Prove $$_2F_1\left(\frac13,\frac13;\frac56;-27\right)\stackrel{\color{#808080}?}=\frac47$$
 
-<!–-break-–>
+<!--break-->
 
 
 I discovered the following conjecture numerically, but have not been able to prove it yet:

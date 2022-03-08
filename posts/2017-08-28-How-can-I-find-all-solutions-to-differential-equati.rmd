@@ -15,7 +15,7 @@ published: true
 
 How can we  find all solutions to differential equation?
 
-<!–-break-–>
+<!--break-->
 
 
 How one can find all functions $$f$$ that there exists $$f'$$ satisfying $$(f(x))^2+(f'(x))^2=1$$? we  just found solutions $$f(x)=1,-1,\sin x$$.

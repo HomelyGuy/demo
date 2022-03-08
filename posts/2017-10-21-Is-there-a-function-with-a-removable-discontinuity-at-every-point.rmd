@@ -16,7 +16,7 @@ published: true
 
 Is there a function with a removable discontinuity at every point?
 
-<!–-break-–>
+<!--break-->
 
 
 If memory serves, ten years ago to the week (or so), we taught first semester freshman calculus for the first time.

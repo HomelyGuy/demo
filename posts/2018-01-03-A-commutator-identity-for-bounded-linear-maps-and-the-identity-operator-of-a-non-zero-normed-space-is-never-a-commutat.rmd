@@ -16,7 +16,7 @@ published: true
 
 A commutator identity for bounded linear maps and the identity operator of a non-zero normed space is never a commutator
 
-<!–-break-–>
+<!--break-->
 
 
 Let $$ \mathcal{X} $$ be a normed linear space and $$ S,T: \mathcal{X} \to \mathcal{X} $$ be linear operators such that $$ S \circ T- T \circ S=1 $$.

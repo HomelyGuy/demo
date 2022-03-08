@@ -17,7 +17,7 @@ published: true
 
 Proof of an estimate for the tail of a normal distribution
 
-<!–-break-–>
+<!--break-->
 
 
 My advisor told me to look up the proof of the following standard estimate so that we can adapt it to the case where we are dealing with something similar but including the addition of a polynomial integrand.

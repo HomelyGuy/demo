@@ -16,7 +16,7 @@ published: true
 
 $$AB-BA$$ is a nilpotent matrix if it commutes with $$A$$
 
-<!–-break-–>
+<!--break-->
 
 
 we saw this in a MathOverflow post and am putting it here for posterity.

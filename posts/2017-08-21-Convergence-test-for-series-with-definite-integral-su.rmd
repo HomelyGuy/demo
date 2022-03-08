@@ -16,7 +16,7 @@ published: true
 
 Convergence test for series with definite integral summand
 
-<!–-break-–>
+<!--break-->
 
 
 we  was asked by a friend this problem: Show whether the series

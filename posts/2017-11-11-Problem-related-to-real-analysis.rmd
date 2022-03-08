@@ -15,7 +15,7 @@ published: true
 
 Is the set of discontinuity of $$f$$ countable?
 
-<!–-break-–>
+<!--break-->
 
 
 Suppose $$f:[0,1]\rightarrow\mathbb{R}$$ is a bounded function satisfying: for each $$c\in [0,1]$$ there exist the limits $$\lim_{x\rightarrow c^+}f(x)$$ and $$\lim_{x\rightarrow c^-}f(x)$$.

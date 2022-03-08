@@ -22,7 +22,7 @@ p(x_i) = 7
 $$
 
 show that $$p(x)$$ has no integer root.
-<!–-break-–>
+<!--break-->
 
 This problem is also not very hard if you write it down and analysis it for a while.
 

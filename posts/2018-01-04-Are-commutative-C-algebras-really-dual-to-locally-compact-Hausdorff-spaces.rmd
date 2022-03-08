@@ -17,7 +17,7 @@ published: true
 
 Are commutative C*-algebras really dual to locally compact Hausdorff spaces?
 
-<!–-break-–>
+<!--break-->
 
 
 Several online sources (e.

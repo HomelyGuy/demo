@@ -24,7 +24,7 @@ $$
 \int_0^\infty \frac{x^{\alpha}dx}{1+2x\cos\beta +x^{2}}=\frac{\pi\sin (\alpha\beta)}{\sin (\alpha\pi)\sin \beta }
 $$
 
-<!–-break-–>
+<!--break-->
 
 # Answer
 

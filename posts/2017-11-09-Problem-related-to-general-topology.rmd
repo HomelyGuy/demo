@@ -15,7 +15,7 @@ published: true
 
 Must every subset of $$\mathbb R$$ contain $$2$$ homeomorphic distinct open sets?
 
-<!–-break-–>
+<!--break-->
 
 
 Take $$X\subseteq\mathbb R$$ containing at least $$2$$ points, we want to prove or construct a counterexample to the statement "$$X$$ contains $$2$$ distinct open sets which are homeomorphic" (where $$X$$ is equipped with the induced topology and $$\mathbb R$$ with the standard one).

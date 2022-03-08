@@ -19,7 +19,7 @@ published: true
 
 (Why) can we treat a function of a variable as another independent variable?
 
-<!–-break-–>
+<!--break-->
 
 
 we are  currently reading my numerical analysis textbook and something's bugging me.

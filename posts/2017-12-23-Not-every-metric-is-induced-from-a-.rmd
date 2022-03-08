@@ -19,7 +19,7 @@ published: true
 
 Not every metric is induced from a norm
 
-<!–-break-–>
+<!--break-->
 
 
 we have studied that every normed space $$(V, \lVert\cdot \lVert)$$ is a metric space with respect to distance function

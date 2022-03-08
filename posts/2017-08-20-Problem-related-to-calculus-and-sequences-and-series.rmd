@@ -16,7 +16,7 @@ published: true
 
 Does the series $$\sum \limits_{n=2}^{\infty }\frac{n^{\log n}}{(\log n)^{n}}$$ converge?
 
-<!–-break-–>
+<!--break-->
 
 
 we are  trying  to find out now whether the series

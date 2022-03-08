@@ -18,7 +18,7 @@ published: true
 
 Compute $$\int_0^\pi\frac{\cos nx}{a^2-2ab\cos x+b^2}\, dx$$
 
-<!–-break-–>
+<!--break-->
 
 
 

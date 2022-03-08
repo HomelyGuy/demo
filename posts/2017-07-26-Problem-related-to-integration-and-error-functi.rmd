@@ -19,7 +19,7 @@ published: true
 
 Integral $$\int_0^\infty\exp\left(-\sqrt2\,x^2\right)\,\operatorname{erfi}(x)\,\log(x)\,x^3\,dx$$
 
-<!–-break-–>
+<!--break-->
 
 
 Consider the following integral:

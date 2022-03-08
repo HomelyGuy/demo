@@ -19,7 +19,7 @@ published: true
 
 Vector, Hilbert, Banach, Sobolev spaces
 
-<!–-break-–>
+<!--break-->
 
 
 Trying to wrap my head around all these different spaces.

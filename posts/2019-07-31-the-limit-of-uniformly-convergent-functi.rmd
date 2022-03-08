@@ -19,7 +19,7 @@ and for each $$x$$,
 $$ \mid f^{(n)}(x) - f^{(n-1)}(x) \mid < \frac{1}{n^2} $$
 show that $$\lim_{n \to \infty} f^{(n)}(x) = c \exp(x)$$ with constant $$c$$.
 
-<!–-break-–>
+<!--break-->
 
 when I first come acorss this question, I don't have a clue, but after put it in Mathematics stackexchange, 
 serveral answer came out, and inspired me some new solution.

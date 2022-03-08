@@ -19,7 +19,7 @@ published: true
 
 If $$f_k \to f$$ a.e. and the $$L^p$$ norms converge, then $$f_k \to f$$ in $$L^p$$
 
-<!–-break-–>
+<!--break-->
 
 
 Let $$1\leq p < \infty$$.

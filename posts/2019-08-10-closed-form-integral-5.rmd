@@ -24,7 +24,7 @@ $$
 \sum_{n=0}^\infty\frac{\operatorname{Li}_{1/2}\left(-2^{-2^{-n}}\right)}{\sqrt{2^n}}
 $$
 
-<!–-break-–>
+<!--break-->
 
 Let
 

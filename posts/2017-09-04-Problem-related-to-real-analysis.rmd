@@ -15,7 +15,7 @@ published: true
 
 Does $$f(n\theta) \to 0$$ for all $$\theta>0$$ and $$f$$ Darboux imply $$f(x) \to 0$$ as $$x \to \infty$$?
 
-<!–-break-–>
+<!--break-->
 
 
 Recall that a Darboux function $$f:\mathbb{R} \to \mathbb{R}$$ is one which satisfies the conclusion of the intermediate value theorem (i.e., connected sets are mapped to connected sets). Being Darboux is a weaker condition than continuity. if a theorem about continuous functions only uses the intermediate value theorem, then chances are it also holds for the entire class of Darboux functions. i  find it interesting to study which theorems about continuous functions also hold for Darboux functions. 

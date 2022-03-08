@@ -16,7 +16,7 @@ published: true
 
 Linear Algebra Versus Functional Analysis
 
-<!–-break-–>
+<!--break-->
 
 
 As it is mentioned in the answer by Sheldon Axler in this post, we usually  restrict linear algebra to finite dimensional linear spaces and study the infinite dimensional ones in functional analysis.

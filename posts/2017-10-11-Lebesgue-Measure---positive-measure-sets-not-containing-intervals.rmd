@@ -16,7 +16,7 @@ published: true
 
 Lebesgue Measure - positive measure sets not containing intervals
 
-<!–-break-–>
+<!--break-->
 
 
 we have  encountered two statements regarding the Lebesgue measure that don't exactly contradict each other, but seem to me to be a little bit unintuitive when regarded with respect to one another.

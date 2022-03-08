@@ -15,7 +15,7 @@ published: true
 
 How to evaluate $$I=\int_0^{\pi/2}x^2\ln(\sin x)\ln(\cos x)\ \mathrm dx$$
 
-<!–-break-–>
+<!--break-->
 
 
 Find the value of

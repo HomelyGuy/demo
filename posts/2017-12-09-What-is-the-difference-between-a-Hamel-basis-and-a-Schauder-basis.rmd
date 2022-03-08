@@ -18,7 +18,7 @@ published: true
 
 What is the difference between a Hamel basis and a Schauder basis?
 
-<!–-break-–>
+<!--break-->
 
 
 Let $$V$$ be a vector space with infinite dimensions.

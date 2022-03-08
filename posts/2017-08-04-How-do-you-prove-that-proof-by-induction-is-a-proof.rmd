@@ -15,7 +15,7 @@ published: true
 
 How do you prove that proof by induction is a proof?
 
-<!–-break-–>
+<!--break-->
 
 
 Are proofs by induction limited to cases where there is an explicit dependance on a integer, like sums? we  cannot grasp the idea of induction being a proof in less explicit cases.

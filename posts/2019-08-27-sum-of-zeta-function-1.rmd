@@ -27,7 +27,7 @@ $$
 $$
 
 
-<!–-break-–>
+<!--break-->
  
 
 We was able to determine $$(1)$$ to have this closed form 

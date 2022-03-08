@@ -20,7 +20,7 @@ $$
 p(7) = 5,  p(15) = 9
 $$
 
-<!–-break-–>
+<!--break-->
 
 This problem is not very hard if you write it down and subtract them.
 

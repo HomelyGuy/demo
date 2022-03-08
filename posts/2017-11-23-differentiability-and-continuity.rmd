@@ -16,7 +16,7 @@ published: true
 
 differentiability and continuity
 
-<!–-break-–>
+<!--break-->
 
 
 we have a question which is quite "candid" and for which we can hardly formalize properly every concepts but nonetheless, we was wondering if there were some topoligical and/or algebraic structure properties over spaces (to be defined) that make the set of continuous functions and the set of differentiable functions the same.

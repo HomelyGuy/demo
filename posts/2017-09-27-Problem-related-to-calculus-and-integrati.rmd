@@ -16,7 +16,7 @@ published: true
 
 What is so special about $$\alpha=-1$$ in the integral of $$x^\alpha$$?
 
-<!–-break-–>
+<!--break-->
 
 
 Of course, it is easy to see, that the integral (or the

@@ -16,7 +16,7 @@ published: true
 
 Construction of a Borel set with positive but not full measure in each interval
 
-<!–-break-–>
+<!--break-->
 
 
 we was wondering how one can construct a Borel set that doesn't have full measure on any interval of the real line but does have positive measure everywhere. 

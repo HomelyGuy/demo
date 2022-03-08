@@ -19,7 +19,7 @@ published: true
 
 Is a linearly independent set whose span is dense a Schauder basis?
 
-<!–-break-–>
+<!--break-->
 
 
 If $$X$$ is a Banach space, then a Schauder basis of $$X$$ is a subset $$B$$ of $$X$$ such that every element of $$X$$ can be written uniquely as an infinite linear combination of elements of $$B$$.

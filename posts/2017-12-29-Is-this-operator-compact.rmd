@@ -17,7 +17,7 @@ published: true
 
 Is this operator compact?
 
-<!–-break-–>
+<!--break-->
 
 
 Suppose ($$x_n$$) is a normalized, linearly independent,  sequence in a reflexive Banach space $$X$$, and $$T$$ is an injective, strictly singular,  bounded operator on $$X$$ such that $$Tx_n\longrightarrow 0$$.

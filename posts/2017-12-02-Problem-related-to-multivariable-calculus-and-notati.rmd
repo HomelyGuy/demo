@@ -16,7 +16,7 @@ published: true
 
 What exactly does $$\frac{\partial(y_1,\dots,y_m)}{\partial(x_1,\dots,x_n)}$$ refer to?
 
-<!–-break-–>
+<!--break-->
 
 
 we have been asking a rather few questions of this nature lately, maybe we are  starting to realise math notation isn't as uniform as we initially thought it would be.

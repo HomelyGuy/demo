@@ -16,7 +16,7 @@ published: true
 
 Convergence of series involving iterated $$ \sin $$
 
-<!–-break-–>
+<!--break-->
 
 
 

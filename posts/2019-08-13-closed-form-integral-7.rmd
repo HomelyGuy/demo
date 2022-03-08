@@ -24,7 +24,7 @@ $$
 \int_0^1 \frac{\operatorname{Li}_s(x-x^2)}{x-x^2}\ dx
 $$
 
-<!–-break-–>
+<!--break-->
 
 # Answer
 

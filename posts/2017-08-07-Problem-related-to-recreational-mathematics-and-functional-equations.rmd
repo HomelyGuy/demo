@@ -16,7 +16,7 @@ published: true
 
 Is there a real-valued function $$f$$ such that $$f(f(x)) = -x$$?
 
-<!–-break-–>
+<!--break-->
 
 # Answer 
 

@@ -16,7 +16,7 @@ published: true
 
 Compact sets as point spectrum of a bounded operator
 
-<!–-break-–>
+<!--break-->
 
 
 It is well known that if $$K$$ is any compact set in $$\mathbb{C}$$, then there exist a bounded linear operator $$T:l_2\to l_2$$ such that $$\sigma(T)=K$$.

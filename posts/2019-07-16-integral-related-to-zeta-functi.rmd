@@ -27,7 +27,7 @@ $$
 
 
 
-<!–-break-–>
+<!--break-->
 
 there are several very similar integrals having known closed forms:
 

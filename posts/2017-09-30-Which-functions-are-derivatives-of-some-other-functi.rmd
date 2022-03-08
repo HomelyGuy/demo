@@ -16,7 +16,7 @@ published: true
 
 Which functions are derivatives of some other function?
 
-<!–-break-–>
+<!--break-->
 
 
 There is a fundamental formula in integral calculus which states that $$\int_a^bF'(x)dx=F(b)-F(a)$$. This formula gives a connection between definite and indefinite integrals. There are plenty of functions which are integrable (in the definite sense)-for example each bounded measurable function is ok. However we don't know precisely which functions do have indefinite integral: in other words which functions are derivatives of some other function?

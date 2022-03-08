@@ -15,7 +15,7 @@ published: true
 
 A function such that $$f(f(n)) = -n$$?
 
-<!–-break-–>
+<!--break-->
 
 
 This question from somebody's job interview made me puzzled:

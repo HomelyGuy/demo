@@ -17,7 +17,7 @@ published: true
 
 Proof $$\int_0^\infty \frac{\exp(-\sqrt{x^2+y^2})}{x^2+y^2}dx = \frac{\pi}{2}\left(\frac{1}{y} - K_0(y)L_{-1}(y) - K_1(y)L_{0}(y)\right)$$
 
-<!–-break-–>
+<!--break-->
 
 
 In this topic the following integral was solved 

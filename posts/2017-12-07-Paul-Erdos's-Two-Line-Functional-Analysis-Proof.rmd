@@ -17,7 +17,7 @@ published: true
 
 Paul Erdos's Two-Line Functional Analysis Proof
 
-<!–-break-–>
+<!--break-->
 
 
 Legends hold that once upon a time, some mathematicians were rather pleased about a 30-ish page result in functional analysis.

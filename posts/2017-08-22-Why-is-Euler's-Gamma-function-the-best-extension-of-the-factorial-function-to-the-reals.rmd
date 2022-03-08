@@ -18,7 +18,7 @@ published: true
 
 Why is Euler's Gamma function the “best” extension of the factorial function to the reals?
 
-<!–-break-–>
+<!--break-->
 
 
 There are lots (an infinitude) of smooth functions that coincide with f(n)=n! on the integers. we s there a simple reason why Euler's Gamma function $$\Gamma (z) = \int_0^\infty t^{z-1} e^{-t} dt$$ is the "best"?  we n particular, we are  looking for reasons that we  can explain to first-year calculus students.

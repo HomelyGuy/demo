@@ -16,7 +16,7 @@ published: true
 
 How to prove $$\zeta'(0)/\zeta(0)=\log(2\pi)$$?
 
-<!–-break-–>
+<!--break-->
 
  
 

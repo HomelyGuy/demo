@@ -19,7 +19,7 @@ published: true
 
 A limit and a coordinate trigonometric transformation of the interior points of a square into the interior points of a triangle
 
-<!–-break-–>
+<!--break-->
 
 
 The coordinate transformation (due to Beukers, Calabi and Kolk)
