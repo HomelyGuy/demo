@@ -6,7 +6,7 @@ pub enum Modes {
 }
 
 pub const ITEMS_PER_PAGE: u64 = 12;
-pub const MODE: Modes = Modes::Development(log::Level::Trace);
+pub const MODE: Modes = Modes::Release;
 
 // the Default value
 //pub const SUBPATH: &str = "/";
@@ -14,7 +14,7 @@ pub const SUBPATH: &str = "demo/";
 
 // site info
 pub const ADMIN: &str = "Bruce Yuan";
-pub const SITE_NAME: &str = "Demo Site";
+pub const SITE_NAME: &str = "Math For Fun";
 pub const LOGO_PIC: &str = "/assets/logo.png";
 pub const AVATR_PIC: &str = "/assets/github.png";
 pub const SITE_DESCRIPTION: &str = "Welcome everybody, glad to see you here!

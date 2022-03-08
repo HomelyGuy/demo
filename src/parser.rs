@@ -57,7 +57,7 @@ pub fn str2blog(s: &str, meta: &BlogMeta) -> Option<Blog> {
     let sp = s.splitn(3, "---").collect::<Vec<_>>();
     let metadata = sp[1].trim();
     let cont = sp[2]
-        .splitn(2, "<!–-break-–>")
+        .splitn(2, "<!--break-->")
         .map(|e| e.trim().to_owned())
         .collect::<Vec<String>>();
     let pat = regex::Regex::new(r"(?P<key>\w+)\s*:\s*(?P<value>.*?$)").unwrap();
@@ -80,7 +80,6 @@ pub fn str2blog(s: &str, meta: &BlogMeta) -> Option<Blog> {
             let key = caps.name("key").map_or("", |e| e.as_str());
             lastkey = key;
             let value = caps.name("value").map_or("", |e| e.as_str());
-            //println!("key: {}, val: {}", key, value);
             if key == "tags" {
                 lastkey = key;
             } else {
@@ -91,7 +90,6 @@ pub fn str2blog(s: &str, meta: &BlogMeta) -> Option<Blog> {
         if let Some(caps) = pat_tag.captures(line) {
             if let Some(tag) = caps.name("tag") {
                 let tag = tag.as_str().trim().to_owned();
-                //println!("tag: {}", tag);
                 tags.push(tag);
                 continue;
             }
@@ -100,13 +98,11 @@ pub fn str2blog(s: &str, meta: &BlogMeta) -> Option<Blog> {
             let ln = caps.name("ln").unwrap().as_str().trim();
             if let Some(item) = map.get_mut(&lastkey) {
                 item.push_str(ln);
-                //println!("lastkey: {:?}, line: {:?}, map: {:?}", lastkey, ln, map);
             } else {
                 log::debug!("Line ingnored: {}", ln);
             }
         }
     }
-    //println!("tags: {:?}, map: {:?}", tags, map);
     if map.get(&"title").is_none() {
         log::error!("Title Missing for {:?}", meta.path);
         return None;
@@ -118,8 +114,6 @@ pub fn str2blog(s: &str, meta: &BlogMeta) -> Option<Blog> {
     let mut blog = Blog {
         meta: meta.clone(),
         tags,
-        //hero: map.remove("hero"),
-        //hero: Some("https://source.unsplash.com/random/1200x400/?yew".into()),
         content: cont,
         published: map
             .remove("published")
@@ -156,6 +150,7 @@ pub enum ParseAct {
     CacheBlog(Blog),
     MoreBlogMeta,
     BlogPath(Vec<String>),
+    ChangeDisplayMode,
 }
 
 /// the inner data of Parser
@@ -176,7 +171,6 @@ impl InnerParser {
     }
 }
 
-//const KEYWORDSY: [&str; 5] = ["title", "description", "tags", "hero", "published"];
 /// it represents a `Parser` that parse all markdown file of directory
 #[derive(Clone, Default, Debug, PartialEq, Properties)]
 pub struct Parser {
@@ -187,6 +181,7 @@ pub struct Parser {
     inner: InnerParser,
     pub order: Order,
     pub parsed: bool,
+    pub display: String,
 }
 
 impl Reducible for Parser {
@@ -196,6 +191,11 @@ impl Reducible for Parser {
             ParseAct::CacheBlog(blog) => (*Rc::make_mut(&mut self)).insert(blog.meta.id, blog),
             ParseAct::MoreBlogMeta => (*Rc::make_mut(&mut self)).load_meta(ITEMS_PER_PAGE),
             ParseAct::BlogPath(paths) => (Rc::make_mut(&mut self)).paths = paths,
+            ParseAct::ChangeDisplayMode => match &self.display as &str {
+                "gridCard" => (Rc::make_mut(&mut self)).display = "listTile".into(),
+                "listTile" => (Rc::make_mut(&mut self)).display = "gridCard".into(),
+                _ => {}
+            },
         }
         self
     }
@@ -217,6 +217,7 @@ impl Parser {
             },
             order: Order::Dec,
             parsed: false,
+            display: "gridCard".into(),
         }
     }
 
@@ -256,7 +257,6 @@ impl Parser {
         let len = self.paths.len() as u64;
         let num = len / ITEMS_PER_PAGE;
         let remainder = len - ITEMS_PER_PAGE * num;
-        log::trace!("paths len: {}, num: {}, remainder: {}", len, num, remainder);
         match remainder as u64 {
             0 => num,
             _ => num + 1,
@@ -268,7 +268,6 @@ impl Parser {
         let len = self.ids.len() as u64;
         let num = len / ITEMS_PER_PAGE;
         let remainder = len - ITEMS_PER_PAGE * num;
-        log::trace!("paths len: {}, num: {}, remainder: {}", len, num, remainder);
         match remainder as u64 {
             0 => num,
             _ => num + 1,
@@ -336,7 +335,6 @@ impl Parser {
                     cnt += 1;
                     if !buf.is_empty() {
                         // parse the string to Blog
-                        log::debug!("parsing file: {:?}", meta.path);
                         let blog = str2blog(&buf, meta);
                         if let Some(Blog { ignored: false, .. }) = blog {
                             let blog = blog.unwrap();
